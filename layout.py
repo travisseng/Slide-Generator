@@ -1,11 +1,11 @@
 import random
 import numpy as np
 class Slide:
-    def __init__(self, bg=None, pages = [], paginate = True, style = [], theme = "default") -> None:
+    def __init__(self, bg=None, pages = [], paginate = True, theme = "default") -> None:
         self.background = bg
         self.paginate = paginate
         self.pages = pages
-        self.style = style
+        self.style = []
         self.theme = theme
         self.header = None
         self.footer = None
@@ -127,7 +127,7 @@ class Text:
     def __init__(self, text) -> None:
         self.text = text
     def build(self):
-        return self.text
+        return "\n" + self.text
     def build2(self):
         return {"text": self.text}
 
@@ -371,7 +371,7 @@ class Page:
         random.shuffle(output)
         ## BODY CONTENT
         # single column
-        if random.random() < 0.66:
+        if random.random() < 0.66 or nb_img_elts == 0:
             output = flatten(output)
             return output
         else: # double column

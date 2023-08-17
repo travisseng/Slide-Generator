@@ -1,60 +1,18 @@
-from content import Content
-from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground
-import json
-import random
+from controller import createSlide
 import glob
-import cv2
-import numpy as np
-import distinctipy
+import os
+import json
+import tqdm
 
+os.makedirs("output", exist_ok=True)
 
-# Get content
-c = Content("sum_slide.json", "Photography")
+json_files = glob.glob("../slide_generator/output/*/sum_slide.json")
+for json_file in tqdm.tqdm(json_files):
+    name_sli = json_file.split("/")[-2]
+    sli_md, sli_json = createSlide(json_file)
+    os.makedirs("output/{}".format(name_sli), exist_ok=True)
 
-# Create layout
-title_page = TitlePage(c.getTitle())
-pages = [Page(item) for item in c.getContents()]
-sli = Slide(pages=[title_page] + pages)
-
-# Customize template and style
-## Paginate
-if random.random() > 0.2:
-    sli.setPaginate(True)
-else:
-    sli.setPaginate(False)
-
-## BACKGROUND
-bg_prob = random.random()
-if bg_prob > 0.5:
-    # Get white background
-    sli.setBg(ColoredBackground("white"))
-elif bg_prob > 0.4:
-    # Get colored background
-    sli.setBg(ColoredBackground(distinctipy.get_hex(distinctipy.get_colors(1, pastel_factor=1)[0])))
-else:
-    # Get random background
-    backgrounds = glob.glob("backgrounds/*.png")
-    bg = random.choice(backgrounds)
-    luminance = np.mean(cv2.cvtColor(cv2.imread(bg), cv2.COLOR_BGR2HSV)[:,:,2])/255.0
-    if luminance < 0.5:
-        sli.addStyle(":root {--color-fg-default: %s; --color-foreground: %s;}" % ("#FFFFFF", "#FFFFFF"))
-    sli.setBg(ImageBackground(bg))
-
-## THEME
-# select random theme
-themes = ["default", "uncover", "gaia"]
-sli.setTheme(random.choice(themes))
-
-## Style
-# Section related
-sli.addStyle("section {display: flex;flex-flow: column; font-size:35px; letter-spacing:1.4px;}")
-# Footer related
-sli.addStyle("header {overflow:visible} header > img.logo {position:absolute; right:15px;}")
-sli.addStyle("header > img.logo {position:absolute; right:15px;}")
-
-## Build
-
-with open("test.md", "w") as file:
-    file.write(sli.build())
-a = json.dumps(sli.build2())
-print(a)
+    with open("output/{}/slide.md".format(name_sli), "w") as file:
+        file.write(sli_md)
+    with open("output/{}/slide.json".format(name_sli), "w") as file:
+        file.write(json.dumps(sli_json))

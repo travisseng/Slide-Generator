@@ -11,6 +11,8 @@ style: |
 
    header > img.logo {position:absolute; right:15px;}
 
+   li::marker {content:"" + "";color:green;}
+
 
 ---
 <!-- backgroundColor: white -->

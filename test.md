@@ -1,19 +1,23 @@
 ---
 marp: true
 math: katex
-theme: uncover
+theme: gaia
 paginate: True
 style: |
    @import url('https://unpkg.com/tailwindcss@2.2.19/dist/utilities.min.css');
-   section {display: flex;flex-flow: column; font-size:35px; letter-spacing:1.4px;}
+   section {display: flex;flex-flow: column; font-size:31.042px; letter-spacing:1.373px;}
 
-   header {overflow:visible} header > img.logo {position:absolute; right:15px;}
+   header {overflow:visible}
 
-   header > img.logo {position:absolute; right:15px;}
+   header > img.logo {position:absolute; right:15px; height: 120px;}
+
+   ul > li::marker {content: '\29BF  ';}
+
+   section::after {content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);}
 
 
 ---
-<!-- backgroundImage: url('backgrounds/aaabstract (1).png') -->
+<!-- backgroundColor: white -->
 <!-- _class: lead -->
 
  # Photography
@@ -22,9 +26,9 @@ style: |
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Introduction
+
 - Etymology: From Greek "phot" meaning "light" and "graphia" meaning "writing"
 - Definition: Photography is the art and practice of creating images using light and a camera
-
 
 ---
 <style scoped>p,li {font-size:0.88em}</style>
@@ -39,20 +43,33 @@ style: |
 <style scoped>p,li {font-size:0.84em}</style>
 
  # Precursor Technologies
+<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
+<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
+
+
+Camera obscura: A device that projects an image onto a screen using a lens and mirrors
+- Pinhole camera: A simple camera made with a small hole instead of a lens
+- Camera lucida: A device used to project an image onto a surface for drawing or painting
+</div>
+
+<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
+
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Camera_obscura_box.jpg/220px-Camera_obscura_box.jpg'/>
 </div>
 </div>
 
-- Camera obscura: A device that projects an image onto a screen using a lens and mirrors
-- Pinhole camera: A simple camera made with a small hole instead of a lens
-- Camera lucida: A device used to project an image onto a surface for drawing or painting
+</div>
+
+</div>
+
 
 ---
 <style scoped>p,li {font-size:0.64em}</style>
 
  # Invention
-- Photography was invented by Joseph Nicephore Niepce in 1826
+
+Photography was invented by Joseph Nicephore Niepce in 1826
 - He used a camera obscura and a sheet of paper coated with silver chloride to capture the image
 - The first photograph took eight hours to expose and was called "View from the Window at Le Gras"
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
@@ -80,55 +97,34 @@ style: |
 ---
 <style scoped>p,li {font-size:0.84em}</style>
 
- # _Film_
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
+ # Film
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Undeveloped_film.png/350px-Undeveloped_film.png'/>
 </div>
 </div>
 
-</div>
-
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
 - Photographic film was introduced in the late 1800s
 - It consisted of a roll of paper coated with silver halide that was exposed in a camera to create an image
 - Film came in different formats, such as 35mm, medium format, and large format
-</div>
-
-</div>
-
 
 ---
 <style scoped>p,li {font-size:0.84em}</style>
 
- # _Black-and-White_
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
+ # Black-and-White
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Dark_room.jpg/220px-Dark_room.jpg'/>
 </div>
 </div>
 
-</div>
 
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
-- Photography was originally done in black and white
+Photography was originally done in black and white
 - The first black and white photographs were taken using the daguerreotype process
 - Black and white photography is still popular today for its classic look and versatility
-</div>
-
-</div>
-
 
 ---
 <style scoped>p,li {font-size:0.80em}</style>
 
- # **Color**
+ # _Color_
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tartan_Ribbon.jpg/220px-Tartan_Ribbon.jpg'/>
 </div>
@@ -175,7 +171,7 @@ style: |
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
- # Cameras
+ # _Cameras_
 - There are many types of cameras, including DSLR (digital single-lens reflex), mirrorless, point-and-shoot, and medium format
 - Each type of camera has its own strengths and weaknesses depending on the photographer's needs and preferences
 
@@ -183,35 +179,27 @@ style: |
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
- # _Stereoscopic_
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
+ # Stereoscopic
 
-- Stereoscopic photography is a technique that captures two images of the same scene from slightly different angles
+
+Stereoscopic photography is a technique that captures two images of the same scene from slightly different angles
 - When viewed through special glasses, the images appear three-dimensional and give the illusion of depth
-</div>
-
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
-
-</div>
-
-</div>
-
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
- # Dual Photography
+ # _Dual Photography_
 
-- Dual photography is a technique that combines two photographs taken at different times or from different angles into one image
+Dual photography is a technique that combines two photographs taken at different times or from different angles into one image
 - This technique can be used to create a sense of movement or to capture a scene with more detail than would be possible with a single photograph
+
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Full-spectrum
-- Full-spectrum photography is a technique that captures the entire visible light spectrum, including ultraviolet and infrared
+
+Full-spectrum photography is a technique that captures the entire visible light spectrum, including ultraviolet and infrared
 - This type of photography can reveal details that are not visible to the naked eye and create unique and surreal images
 
 
@@ -219,38 +207,39 @@ style: |
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Ultraviolet and Infrared
-- Ultraviolet and infrared photography are specialized techniques that use light outside of the visible spectrum to capture unique images
-- Ultraviolet photographs can reveal details such as fluorescent colors, while infrared photographs can create a surreal and dreamlike effect
+1. Ultraviolet and infrared photography are specialized techniques that use light outside of the visible spectrum to capture unique images
+2. Ultraviolet photographs can reveal details such as fluorescent colors, while infrared photographs can create a surreal and dreamlike effect
 
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Layering
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
-
-</div>
-
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
 
 - Layering is a technique that combines multiple images or exposures into one image
 - This technique can be used to create complex compositions or to combine different elements from separate photographs into one image
-</div>
-
-</div>
-
 
 ---
 <style scoped>p,li {font-size:0.88em}</style>
 
- # Light Field
-- Light field photography is a technique that captures not just the intensity of light, but also its direction and angle
-- This type of photography can create images with a sense of depth and dimension, as well as unique bokeh (out-of-focus areas) effects
+ # **Light Field**
+<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
+<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
+
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/M%C3%BC%C3%BCrlooga_%28Arabidopsis_thaliana%29_lehekarv_%28trihhoom%29_311_0804.JPG/220px-M%C3%BC%C3%BCrlooga_%28Arabidopsis_thaliana%29_lehekarv_%28trihhoom%29_311_0804.JPG'/>
 </div>
+</div>
+
+</div>
+
+<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
+
+
+Light field photography is a technique that captures not just the intensity of light, but also its direction and angle
+- This type of photography can create images with a sense of depth and dimension, as well as unique bokeh (out-of-focus areas) effects
+</div>
+
 </div>
 
 
@@ -258,7 +247,8 @@ style: |
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Other Techniques
-- Other techniques in photography include panoramic, HDR (high dynamic range), and nighttime photography
+
+Other techniques in photography include panoramic, HDR (high dynamic range), and nighttime photography
 - Each technique has its own challenges and requires specialized equipment and skills
 
 
@@ -266,7 +256,8 @@ style: |
 <style scoped>p,li {font-size:0.84em}</style>
 
  # Types of Photography
-- Amateur photography is done for personal enjoyment and often involves taking photos of family, friends, and hobbies
+
+Amateur photography is done for personal enjoyment and often involves taking photos of family, friends, and hobbies
 - Commercial photography is used to promote products or services and can be taken in a studio or on location
 - Art photography is a creative form of photography that focuses on the artistic aspects of the medium
 - Photojournalism combines photography and journalism to tell news stories and document events
@@ -276,19 +267,20 @@ style: |
 <style scoped>p,li {font-size:0.88em}</style>
 
  # Science and Forensics
+- Photography is used in many scientific fields, such as astronomy, biology, and medicine
+- It is also used in forensic science to document evidence and crime scenes
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Wootton_bridge.jpg/220px-Wootton_bridge.jpg'/>
 </div>
 </div>
 
-- Photography is used in many scientific fields, such as astronomy, biology, and medicine
-- It is also used in forensic science to document evidence and crime scenes
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
  # _Wildlife Photography_
-- Wildlife photography involves taking photos of animals and other wildlife in their natural habitats
+
+Wildlife photography involves taking photos of animals and other wildlife in their natural habitats
 - This type of photography requires patience, skill, and knowledge of the subject's behavior and habitat
 
 
@@ -296,6 +288,9 @@ style: |
 <style scoped>p,li {font-size:0.84em}</style>
 
  # Social and Cultural Implications
+
+Photography has had a profound impact on society and culture, from capturing important historical events to influencing art and advertising
+- It has also raised questions about privacy, representation, and cultural appropriation
 <div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0"><div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">
 <img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Aktikompositsioon_19_%28J._K%C3%BCnnap%29.jpg/220px-Aktikompositsioon_19_%28J._K%C3%BCnnap%29.jpg'/>
 </div>
@@ -304,65 +299,32 @@ style: |
 </div>
 </div>
 
-- Photography has had a profound impact on society and culture, from capturing important historical events to influencing art and advertising
-- It has also raised questions about privacy, representation, and cultural appropriation
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Law
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
 
 
-</div>
-
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
-- Photography is subject to various laws and regulations, such as copyright law and privacy rights
+Photography is subject to various laws and regulations, such as copyright law and privacy rights
 - It is important for photographers to understand these laws and respect the rights of others when taking and using photographs
-</div>
-
-</div>
-
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Reference Works
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
-
-</div>
-
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
 - There are many reference works available for photographers, including books on technique, lighting, and composition
 - These resources can help photographers improve their skills and create more effective images
-</div>
-
-</div>
 
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>
 
  # Other Books
-<div style='flex:1 1 auto; min-height:0;' class="grid grid-cols-8 gap-4">
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
 
 
-</div>
-
-<div style='display:flex; flex-flow:column; min-height:0;' class="col-span-4">
-
-- Other books that may be of interest to photographers include history books, art books, and books on specific techniques or subjects
+Other books that may be of interest to photographers include history books, art books, and books on specific techniques or subjects
 - These books can provide inspiration, knowledge, and new perspectives for photographers looking to expand their skills and creativity
-</div>
-
-</div>
-
 
 ---
 <style scoped>p,li {font-size:0.92em}</style>

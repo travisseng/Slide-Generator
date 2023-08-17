@@ -4,6 +4,7 @@ class Slide:
     def __init__(self, bg=None, pages = [], paginate = True, theme = "default") -> None:
         self.background = bg
         self.paginate = paginate
+        self.paginate_total = False
         self.pages = pages
         self.style = []
         self.theme = theme
@@ -19,8 +20,10 @@ class Slide:
         self.theme = theme
     def setBg(self, bg):
         self.background = bg
-    def setPaginate(self, bool):
+    def setPaginate(self, bool, total=False):
         self.paginate = bool
+        if total:
+            self.paginate_total = True
     def addStyle(self, style):
         self.style.append(style)
     def build(self):
@@ -34,7 +37,10 @@ class Slide:
         if self.footer is not None:
             output.append("footer: %s" % self.footer)
         if self.paginate:
+
             output.append("paginate: True")
+            if self.paginate_total:
+                self.addStyle("section::after {content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);}")
         ## style options
         output.append("style: |\n   @import url('https://unpkg.com/tailwindcss@2.2.19/dist/utilities.min.css');")
         for style in self.style:
@@ -61,7 +67,11 @@ class Slide:
         for i,p in enumerate(self.pages):
             page_output = p.build2()
             if self.paginate:
-                page_output.append({"page_nb": i+1})
+                if self.paginate_total:
+                    page_output.append({"page_nb": "%d/%d" % (i+1,len(self.pages))})
+                else:
+                    page_output.append({"page_nb": i+1})
+                
             output.append({"slide": page_output})
         return output
 
@@ -80,16 +90,11 @@ class ImageBackground:
     
 
 class GradientBackground:
-    def __init__(self, deg = 180) -> None:
-        self.deg = int(deg)
+    def __init__(self, colors) -> None:
+        self.colors = colors
     def build(self):
         output = []
-        output.append("<style>")
-        output.append("section {")
-        output.append("background: rgb(0,0,0);")
-        output.append("background: linear-gradient({0}deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);".format(self.deg))
-        output.append("}")
-        output.append("</style>")
+        output.append("<style>section {background-image: linear-gradient(%s, %s)}</style>" % (self.colors[0], self.colors[1]))
         return output
 
 
@@ -133,10 +138,11 @@ class Text:
 
 
 class BulletPoint:
-    def __init__(self, bps, style="-", lvl=0):
+    def __init__(self, bps, style="-", count=1, lvl=0):
         self.bps = bps
         self.style = style
         self.lvl = lvl
+        self.count = count
     def build(self):
         output = ""
         if self.style == "-":
@@ -148,14 +154,19 @@ class BulletPoint:
             for i, bp in enumerate(self.bps):
                 for i in range(self.lvl):
                     output = output + " "
-                output = output + "%i. " % i + bp + "\n"            
+                output = output + "%i. " % self.count + bp + "\n"            
         return output[:-1] # remove last line return
     def build2(self):
         # output = {"bps":[]}
         output = []
-        for i, bp in enumerate(self.bps):
-            # output["bps"].append({"text": bp})
-            output.append({"text": "+ %s" % bp})
+        if self.style == ".":
+            for i, bp in enumerate(self.bps):
+                # output["bps"].append({"text": bp})
+                output.append({"text": "%d. %s" % (self.count, bp)})
+        else:
+            for i, bp in enumerate(self.bps):
+                # output["bps"].append({"text": bp})
+                output.append({"text": "+ %s" % (bp)})
         return output
 
 
@@ -328,23 +339,28 @@ class TwoColumns:
             output.append(cnt.build2())
         return output
 
-def convertToElement(content):
+def convertToElement(content, bp_style = "-"):
     if content["cls"] == "img":
         return Image(content["image"], caption=content["caption"])
     elif content["cls"] == "text":
         return Text(content["cnt"])
     elif content["cls"] == "bp":
-        return BulletPoint([content["cnt"]])
+        Page.bps_count += 1
+        return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count)
 def flatten(l):
     return [item for sublist in l for item in sublist]
 
 MAX_NB_IMG = 6
 class Page:
+
+    bps_count = 0
+
     def __init__(self, contents=[]):
         self.contents = contents
         self.style = ""
         self.title = self.generate_title()
         self.body = self.generate_body()
+        Page.bps_count = 0
         
 
     def addPageStyle(self, style):
@@ -356,7 +372,16 @@ class Page:
     def generate_body(self):
 
         output = []
-        txt_elements = [convertToElement(item) for item in self.contents["text"]]
+
+        # ordered or ul list
+        if random.random() > 0.15:
+            bp_style = "-"
+        else:
+            bp_style = "."
+
+        if random.random() > 0.5:
+            self.contents["text"][0]["cls"] = "text"
+        txt_elements = [convertToElement(item, bp_style) for item in self.contents["text"]]
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
 
         

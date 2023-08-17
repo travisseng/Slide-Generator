@@ -1,26 +1,44 @@
 import random
-
+import numpy as np
 class Slide:
-    def __init__(self, bg=None, pages = [], paginate = True, style = "") -> None:
+    def __init__(self, bg=None, pages = [], paginate = True, style = [], theme = "default") -> None:
         self.background = bg
         self.paginate = paginate
         self.pages = pages
         self.style = style
+        self.theme = theme
+        self.header = None
+        self.footer = None
+    def setHeader(self, header):
+        self.header = header
+    def setFooter(self, footer):
+        self.footer = footer
     def addPage(self, page):
         self.pages.append(page)
     def setTheme(self, theme):
         self.theme = theme
     def setBg(self, bg):
         self.background = bg
+    def setPaginate(self, bool):
+        self.paginate = bool
+    def addStyle(self, style):
+        self.style.append(style)
     def build(self):
         output = []
         output.append("---")
         output.append("marp: true")
         output.append("math: katex")
+        output.append("theme: %s" % self.theme)
+        if self.header is not None:
+            output.append("header: %s" % self.header)
+        if self.footer is not None:
+            output.append("footer: %s" % self.footer)
         if self.paginate:
             output.append("paginate: True")
         ## style options
-        output.append("style: @import url('https://unpkg.com/tailwindcss@2.2.19/dist/utilities.min.css'); %s" % self.style)
+        output.append("style: |\n   @import url('https://unpkg.com/tailwindcss@2.2.19/dist/utilities.min.css');")
+        for style in self.style:
+            output.append("   %s\n" % style)
         output.append("")
         output.append("---")
         if self.background is not None:
@@ -39,11 +57,12 @@ class Slide:
             raise Exception()
     def build2(self):
         output = []
+        
         for i,p in enumerate(self.pages):
-            output.append({"slide": []})
-            for c in p:
-                if c.build2() is not None:
-                    output[i]["slide"].append(c.build2())
+            page_output = p.build2()
+            if self.paginate:
+                page_output.append({"page_nb": i+1})
+            output.append({"slide": page_output})
         return output
 
 class ColoredBackground:
@@ -130,7 +149,7 @@ class BulletPoint:
                 for i in range(self.lvl):
                     output = output + " "
                 output = output + "%i. " % i + bp + "\n"            
-        return output
+        return output[:-1] # remove last line return
     def build2(self):
         # output = {"bps":[]}
         output = []
@@ -164,7 +183,6 @@ class Image:
         self.is_bg = is_bg
         self.orientation = orientation
         self.option = option
-        self.height_percentage = height_percentage
         self.caption = caption
         self.display_caption = display_caption
     def build(self):
@@ -173,7 +191,7 @@ class Image:
         if self.width is None:
             # return "![%s](" % self.option + self.img + ")" 
             output = '<div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em">\n'
-            output = output + "<img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='{}'/>".format(self.img)
+            output = output + "<img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0); margin-left:0.1em; margin-right:0.1em' src='{}'/>".format(self.img)
             output = output + "\n</div>\n"
             if self.caption != "" and self.display_caption == True:
                 # print(self.caption)
@@ -185,8 +203,61 @@ class Image:
         return {"img": ""}
     def setDisplayCaption(self, bool):
         self.display_caption = bool
-    def setHeightPercentage(self, height_percentage):
-        self.height_percentage = height_percentage
+
+class HorizontalImages:
+    def __init__(self, imgs, caption = "", display_caption=False, is_bg=False, orientation="left", width = None, option = "height:350px", height_percentage=80):
+        self.imgs = imgs
+        self.width = width
+        self.is_bg = is_bg
+        self.orientation = orientation
+        self.option = option
+        self.caption = caption
+        self.display_caption = display_caption
+    def build(self):
+        if self.is_bg:
+            option = self.option + "bg " + self.orientation
+        if self.width is None:
+            # return "![%s](" % self.option + self.img + ")"
+            output = '<div style="display: flex; flex: 1 1 auto; flex-flow: row; min-height: 0">'
+            for img in self.imgs:
+                output = output + '<div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em;;margin-right:0.15em">\n'
+            
+                output = output + "<img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='{}'/>".format(img)
+                output = output + "\n</div>\n"
+            output = output + "</div>\n"
+            if self.caption != "" and self.display_caption == True:
+                # print(self.caption)
+                # output = output + '\n <p style="text-align: center;">%s</p>' % self.caption
+                output = output + "\n \n" + self.caption
+            return output
+    def build2(self):
+        # return {"img": self.caption}
+        return {"img": ""}
+    def setDisplayCaption(self, bool):
+        self.display_caption = bool
+MAX_NB_IMGS_ROW = 3
+class Images:
+    def __init__(self, imgs):
+        self.imgs = imgs
+        self.nb_images = len(self.imgs)
+    def generate_layout_images(self):
+        ## generate image layout based on numbers
+        output = []
+        nb_rows = int(np.ceil(self.nb_images / MAX_NB_IMGS_ROW))
+        for i in range(nb_rows):
+            output.append(HorizontalImages(self.imgs[i*MAX_NB_IMGS_ROW:(i+1)*MAX_NB_IMGS_ROW]))
+        return output
+    def build(self):
+        layout_elements = self.generate_layout_images()
+        if len(layout_elements) == 0:
+            return ""
+        output = ""
+        
+        for el in layout_elements:
+            output = output + el.build()
+        return output
+    def build2(self):
+        return [{"img": ""} for item in range(self.nb_images)]
 
 class HorizontalLayout:
     def __init__(self, contents = []) -> None:
@@ -217,9 +288,9 @@ class HtmlElement:
 
 
 grid_col_7 = Style("<div style='flex:1 1 auto' class=\"grid grid-cols-7 gap-4\">")
-grid_col_x = "<div style='flex:1 1 auto; min-height:0' class=\"grid grid-cols-{} gap-4\">"
+grid_col_x = "<div style='flex:1 1 auto; min-height:0;' class=\"grid grid-cols-{} gap-4\">"
 col_span_4 = Style("<div class=\"col-span-4\">\n")
-col_span_x = "<div style='display:flex; flex-flow:column; min-height:0' class=\"col-span-{}\">\n"
+col_span_x = "<div style='display:flex; flex-flow:column; min-height:0;' class=\"col-span-{}\">\n"
 close_div = Style("</div>\n")
 col_span_3 = Style("<div class=\"col-span-3\">\n")
 class TwoColumns:
@@ -232,9 +303,14 @@ class TwoColumns:
         self.output = []
     def build(self):
         self.output.append(Style(grid_col_x.format(self.left_c_size + self.right_c_size)))
+        nb_elements_left = len(self.left_contents)
+        # font_size_left = 1.0 - 0.065*nb_elements_left
+        ## auto resize depends on number of bullet points
         self.output.append(Style(col_span_x.format(self.left_c_size)))
         self.output = self.output + self.left_contents
         self.output.append(close_div)
+        # nb_elements_right = len(self.right_contents)
+        # font_size_right = 1.0 - 0.065*nb_elements_right
         self.output.append(Style(col_span_x.format(self.right_c_size)))
         self.output = self.output + self.right_contents
         self.output.append(close_div)
@@ -245,7 +321,12 @@ class TwoColumns:
             o.append(c.build())
         return "\n".join(o)
     def build2(self):
-        return None
+        output = []
+        for cnt in self.left_contents:
+            output.append(cnt.build2())
+        for cnt in self.right_contents:
+            output.append(cnt.build2())
+        return output
 
 def convertToElement(content):
     if content["cls"] == "img":
@@ -257,9 +338,17 @@ def convertToElement(content):
 def flatten(l):
     return [item for sublist in l for item in sublist]
 
+MAX_NB_IMG = 6
 class Page:
     def __init__(self, contents=[]):
         self.contents = contents
+        self.style = ""
+        self.title = self.generate_title()
+        self.body = self.generate_body()
+        
+
+    def addPageStyle(self, style):
+        self.style = self.style + style
 
     def generate_title(self):
         return Title(self.contents["title"], True)
@@ -267,27 +356,60 @@ class Page:
     def generate_body(self):
 
         output = []
-        output.append(self.contents["text"])
-        output.append(self.contents["images"])
+        txt_elements = [convertToElement(item) for item in self.contents["text"]]
+        img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
+
+        
+        output.append(txt_elements)
+        output.append(img_elements)
+
+        ## adjust text size based on number of elements
+        nb_txt_elts = len(txt_elements)
+        nb_img_elts = min(len(self.contents["images"]), MAX_NB_IMG)
+        self.addPageStyle("p,li {font-size:%.2fem}" % (1.0 - (nb_txt_elts+nb_img_elts)*0.04))
+
         random.shuffle(output)
         ## BODY CONTENT
         # single column
         if random.random() < 0.66:
-            
             output = flatten(output)
-            return [convertToElement(item) for item in output]
+            return output
         else: # double column
-            left_c = [convertToElement(item) for item in output[0]]
-            right_c = [convertToElement(item) for item in output[1]]
+            left_c = output[0]
+            right_c = output[1]
             return [TwoColumns(left_c, right_c)]
 
     def build(self):
         output = []
-        title = self.generate_title()
-        body = self.generate_body()
-        output.append(title.build())
-        for c in body:
+        output.append("<style scoped>%s</style>\n" % self.style)
+        output.append(self.title.build())
+        for c in self.body:
             output.append(c.build())
         return "\n".join(output)
+    def build2(self):
+        output = []
+        output.append(self.title.build2())
+        for c in self.body:
+            output.append(c.build2())
+        return output
+
+class TitlePage:
+    def __init__(self, title="", style = "<!-- _class: lead -->"):
+        self.style = style
+        self.title = title
+    
+    def generate_title(self):
+        return Title(self.title, True)
+    
+    def build(self):
+        output = []
+        output.append("%s\n" % self.style)
+        output.append(self.generate_title().build())
+        return "\n".join(output)
+    
+    def build2(self):
+        output = []
+        output.append(self.generate_title().build2())
+        return output
 
         

@@ -44,9 +44,12 @@ def group_bp_tgt(contents):
 
 class Content:
     
-    def __init__(self, json_file):
-        self.article_name = json_file.split("/")[-2]
-        with open("/home/tseng/projects/slide_generator/output/500px/sum_slide.json", 'r') as openfile:
+    def __init__(self, json_file, article_name = None):
+        if article_name is None:
+            self.article_name = json_file.split("/")[-2]
+        else:
+            self.article_name = article_name
+        with open(json_file, 'r') as openfile:
             self.contents = json.load(openfile)[1:]
         
     def getContents(self):
@@ -58,3 +61,6 @@ class Content:
                 new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": []}
             output.append(new_dict)
         return output
+    
+    def getTitle(self):
+        return self.article_name

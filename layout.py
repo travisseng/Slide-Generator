@@ -362,6 +362,10 @@ class Page:
         self.body = self.generate_body()
         Page.bps_count = 0
         
+    # def groupElements(elements, cls="img"):
+    #     output = []
+    #     for el in elements:
+    #         if el[""]
 
     def addPageStyle(self, style):
         self.style = self.style + style
@@ -378,13 +382,16 @@ class Page:
             bp_style = "-"
         else:
             bp_style = "."
-
-        if len(self.contents["text"]) > 0 and random.random() > 0.5:
-            self.contents["text"][0]["cls"] = "text"
+        # transform to text randomly
+        if len(self.contents["text"]) > 0 and random.random() > 0.6:
+            for i in range(len(self.contents["text"])):
+                if random.random() > 0.5: 
+                    self.contents["text"][i]["cls"] = "text"
+        
         txt_elements = [convertToElement(item, bp_style) for item in self.contents["text"]]
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
 
-        
+
         output.append(txt_elements)
         output.append(img_elements)
 
@@ -396,13 +403,16 @@ class Page:
         random.shuffle(output)
         ## BODY CONTENT
         # single column
-        if random.random() < 0.66 or nb_img_elts == 0:
+        if random.random() < 0.5:
             output = flatten(output)
             return output
         else: # double column
-            left_c = output[0]
-            right_c = output[1]
-            return [TwoColumns(left_c, right_c)]
+            output = flatten(output)
+            random.shuffle(output)
+            half = len(output) // 2
+            # left_c = output[0]
+            # right_c = output[1]
+            return [TwoColumns(output[:half], output[half:])]
 
     def build(self):
         output = []

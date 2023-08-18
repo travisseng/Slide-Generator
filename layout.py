@@ -379,7 +379,7 @@ class Page:
         else:
             bp_style = "."
 
-        if random.random() > 0.5:
+        if len(self.contents["text"]) > 0 and random.random() > 0.5:
             self.contents["text"][0]["cls"] = "text"
         txt_elements = [convertToElement(item, bp_style) for item in self.contents["text"]]
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]

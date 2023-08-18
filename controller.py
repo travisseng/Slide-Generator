@@ -70,8 +70,9 @@ def createSlide(json_file, name=None):
     sli.addStyle("ul > li::marker {content: '%s  ';}" % random.choice(bullet_styles))
     return sli.build(), sli.build2()
 
-sli_md, sli_json = createSlide("/home/travis/Documents/these/projects/Slide-Generator/sum_slide.json", "Photography")
-with open("test.md", "w") as f:
-    f.write(sli_md)
-with open("test.json", "w") as f:
-    f.write(json.dumps(sli_json))
+if __name__ == "__main__":
+    sli_md, sli_json = createSlide("/home/travis/Documents/these/projects/Slide-Generator/sum_slide.json", "Photography")
+    with open("test.md", "w") as f:
+        f.write(sli_md)
+    with open("test.json", "w") as f:
+        f.write(json.dumps(sli_json))

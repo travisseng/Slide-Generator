@@ -188,7 +188,7 @@ class Equation:
         return output
     
 class Image:
-    def __init__(self, img, classe = "", caption = "", display_caption=False, is_bg=False, orientation="left", width = None, option = "height:350px", height_percentage=80):
+    def __init__(self, img, classe = "", caption = "", display_caption=False, is_bg=False, is_header=False, orientation="left", width = None, option = "height:350px", height_percentage=80):
         self.img = img
         self.width = width
         self.is_bg = is_bg
@@ -196,13 +196,17 @@ class Image:
         self.option = option
         self.caption = caption
         self.display_caption = display_caption
+        self.classe = classe
+        self.is_header = is_header
     def build(self):
         if self.is_bg:
-            option = self.option + "bg " + self.orientation
+            return "![bg contain](%s)" % self.img
+        if self.is_header:
+            return "<img class='{}' style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0);' src='{}'/>\n".format(self.classe,self.img)
         if self.width is None:
             # return "![%s](" % self.option + self.img + ")" 
-            output = '<div style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em">\n'
-            output = output + "<img style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0); margin-left:0.1em; margin-right:0.1em' src='{}'/>".format(self.img)
+            output = '<div class="%s" style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; margin-bottom:0.1em">\n' % self.classe
+            output = output + "<img class='{}' style='object-fit: contain; max-height:100%; max-width:100%; background-color: rgba(0,0,0,0); margin-left:0.1em; margin-right:0.1em' src='{}'/>".format(self.classe,self.img)
             output = output + "\n</div>\n"
             if self.caption != "" and self.display_caption == True:
                 # print(self.caption)
@@ -297,6 +301,22 @@ class HtmlElement:
     def build2(self):
         return ""
 
+class Header:
+    def __init__(self, contents) -> None:
+        self.contents = contents
+    def setContents(self, contents):
+        self.contents = contents
+    def build(self):
+        output = '<header>\n\n'
+        for c in self.contents:
+            output += c.build() + '\n'
+        return output + '</header>\n'
+    def build2(self):
+        output = {"header":[]}
+        for c in self.contents:
+            output["header"].append(c.build2())
+        return output
+
 
 grid_col_7 = Style("<div style='flex:1 1 auto' class=\"grid grid-cols-7 gap-4\">")
 grid_col_x = "<div style='flex:1 1 auto; min-height:0;' class=\"grid grid-cols-{} gap-4\">"
@@ -355,23 +375,34 @@ class Page:
 
     bps_count = 0
 
-    def __init__(self, contents=[]):
+    def __init__(self, contents=[], display_title=True, title=None, header=None):
         self.contents = contents
+        self.display_title = display_title
         self.style = ""
-        self.title = self.generate_title()
+        if title is None:
+            self.title = self.generate_title()
+        else:
+            self.title = self.generate_title(title)
         self.body = self.generate_body()
+        self.header = header
         Page.bps_count = 0
-        
+    
+    def setHeader(self, header):
+        self.header = header
     # def groupElements(elements, cls="img"):
     #     output = []
     #     for el in elements:
     #         if el[""]
-
+    def setDisplayTitle(self, display):
+        self.display_title = display
     def addPageStyle(self, style):
         self.style = self.style + style
 
-    def generate_title(self):
-        return Title(self.contents["title"], True)
+    def generate_title(self, title=None):
+        if title is None:
+            return Title(self.contents["title"], True)
+        else:
+            return Title(title)
     
     def generate_body(self):
 
@@ -383,7 +414,7 @@ class Page:
         else:
             bp_style = "."
         # transform to text randomly
-        if len(self.contents["text"]) > 0 and random.random() > 0.6:
+        if len(self.contents["text"]) > 0 and random.random() > 0.5:
             for i in range(len(self.contents["text"])):
                 if random.random() > 0.5: 
                     self.contents["text"][i]["cls"] = "text"
@@ -417,15 +448,23 @@ class Page:
     def build(self):
         output = []
         output.append("<style scoped>%s</style>\n" % self.style)
-        output.append(self.title.build())
+        if self.header is not None:
+            output.append(self.header.build())
+        if self.display_title:
+            output.append(self.title.build())
         for c in self.body:
             output.append(c.build())
         return "\n".join(output)
     def build2(self):
         output = []
-        output.append(self.title.build2())
+        if self.header is not None:
+            output.append(self.header.build2())
+        body = []
+        if self.display_title:
+            body.append(self.title.build2())
         for c in self.body:
-            output.append(c.build2())
+            body.append(c.build2())
+        output.append({'body' : body})
         return output
 
 class TitlePage:
@@ -447,4 +486,20 @@ class TitlePage:
         output.append(self.generate_title().build2())
         return output
 
+class ImagePage:
+    def __init__(self, img, is_bg=False):
+        self.img = img
+        self.is_bg = is_bg
+        self.img_elt = Image(self.img, is_bg=is_bg)
+
+    def build(self):
+        output = []
+        
+        output.append(self.img_elt.build())
+        return "\n".join(output)
+    
+    def build2(self):
+        output = []
+        output.append(self.img_elt.build2())
+        return output
         

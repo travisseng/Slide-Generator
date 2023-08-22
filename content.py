@@ -1,5 +1,5 @@
 import json
-
+import random
 def parse_content(cnt):
         lines = [item.strip() for item in cnt.split('\n') if len(item.strip()) > 0]
         contents = []
@@ -64,3 +64,22 @@ class Content:
     
     def getTitle(self):
         return self.article_name
+    
+    def getImages(self):
+        contents = self.getContents()
+        img_list = [item["images"] for item in contents if len(item["images"]) > 0]
+        flat_list = [item["image"] for sublist in img_list for item in sublist]
+        return flat_list
+    
+    def getRandomImage(self):
+        images = self.getImages()
+        if len(images) > 0:
+            return random.choice(images)
+        else:
+            return None
+    def getTitles(self):
+        return [item["title"] for item in self.contents]
+    
+    def getRandomTitle(self):
+        titles = self.getTitles()
+        return random.choice(titles)

@@ -319,6 +319,22 @@ class Header:
             output["header"].append(c.build2())
         return output
 
+class Footer:
+    def __init__(self, contents) -> None:
+        self.contents = contents
+    def setContents(self, contents):
+        self.contents = contents
+    def build(self):
+        output = '<footer>\n\n'
+        for c in self.contents:
+            output += c.build() + '\n'
+        return output + '</footer>\n'
+    def build2(self):
+        output = {"footer":[]}
+        for c in self.contents:
+            output["footer"].append(c.build2())
+        return output
+
 
 grid_col_7 = Style("<div style='flex:1 1 auto' class=\"grid grid-cols-7 gap-4\">")
 grid_col_x = "<div style='flex:1 1 auto; min-height:0;' class=\"grid grid-cols-{} gap-4\">"
@@ -377,7 +393,7 @@ class Page:
 
     bps_count = 0
 
-    def __init__(self, contents=[], display_title=True, title=None, header=None):
+    def __init__(self, contents=[], display_title=True, title=None, header=None, footer=None):
         self.contents = contents
         self.display_title = display_title
         self.style = ""
@@ -387,6 +403,7 @@ class Page:
             self.title = self.generate_title(title)
         self.body = self.generate_body()
         self.header = header
+        self.footer = footer
         Page.bps_count = 0
     
     def setHeader(self, header):
@@ -395,6 +412,9 @@ class Page:
     #     output = []
     #     for el in elements:
     #         if el[""]
+    def setFooter(self, footer):
+        self.footer = footer
+
     def setDisplayTitle(self, display):
         self.display_title = display
     def addPageStyle(self, style):
@@ -453,6 +473,8 @@ class Page:
         output.append("<style scoped>%s</style>\n" % self.style)
         if self.header is not None:
             output.append(self.header.build())
+        if self.footer is not None:
+            output.append(self.footer.build())
         if self.display_title:
             output.append(self.title.build())
             
@@ -470,6 +492,8 @@ class Page:
         for c in self.body:
             body.append(c.build2())
         output.append({'body' : body})
+        if self.footer is not None:
+            output.append(self.footer.build2())
         return output
 
 class TitlePage:
@@ -492,19 +516,30 @@ class TitlePage:
         return output
 
 class ImagePage:
-    def __init__(self, img, is_bg=False):
+    def __init__(self, img, title=None, is_bg=False):
         self.img = img
         self.is_bg = is_bg
         self.img_elt = Image(self.img, is_bg=is_bg)
+        self.title = title
+        self.body = self.generateBody()
+
+    def generateBody(self):
+        body = []
+        if self.title is not None:
+            body.append(Title(self.title))
+        body.append(self.img_elt)
+        random.shuffle(body)
+        return body
 
     def build(self):
         output = []
-        
-        output.append(self.img_elt.build())
+        for c in self.body:
+            output.append(c.build())
         return "\n".join(output)
     
     def build2(self):
-        output = []
-        output.append({"body":self.img_elt.build2()})
-        return output
+        output = {"body":[]}
+        for c in self.body:
+            output["body"].append(c.build2())
+        return [output]
         

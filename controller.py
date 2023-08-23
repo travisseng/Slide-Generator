@@ -56,7 +56,7 @@ def createSlide(json_file, name=None):
                 p.setDisplayTitle(False)
                 header_content = [Title(titles[i])]
                 if random.random() > 0.5:
-                    header_content.append(Image(random.choice(LOGOS_FILES), classe="logo",is_header=True))
+                    header_content.append(Image("../../" + random.choice(LOGOS_FILES), classe="logo",is_header=True))
                     random.shuffle(header_content)
                 p.setHeader(Header(header_content))
             else:
@@ -98,7 +98,7 @@ def createSlide(json_file, name=None):
         luminance = np.mean(cv2.cvtColor(cv2.imread(bg), cv2.COLOR_BGR2HSV)[:,:,2])/255.0
         if luminance < 0.5:
             sli.addStyle(":root {--color-fg-default: %s; --color-foreground: %s;}" % ("#FFFFFF", "#FFFFFF"))
-        sli.setBg(ImageBackground(bg))
+        sli.setBg(ImageBackground("../../" + bg))
 
     ## THEME
     # select random theme

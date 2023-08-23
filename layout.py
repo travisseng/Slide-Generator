@@ -154,7 +154,8 @@ class BulletPoint:
             for i, bp in enumerate(self.bps):
                 for i in range(self.lvl):
                     output = output + " "
-                output = output + "%i. " % self.count + bp + "\n"            
+                output = output + "%i. " % Page.bps_count + bp + "\n"
+                Page.bps_count += 1            
         return output[:-1] # remove last line return
     def build2(self):
         # output = {"bps":[]}
@@ -162,7 +163,8 @@ class BulletPoint:
         if self.style == ".":
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
-                output.append({"text": "%d. %s" % (self.count, bp)})
+                output.append({"text": "%d. %s" % (Page.bps_count, bp)})
+                Page.bps_count += 1   
         else:
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
@@ -365,7 +367,7 @@ def convertToElement(content, bp_style = "-"):
     elif content["cls"] == "text":
         return Text(content["cnt"])
     elif content["cls"] == "bp":
-        Page.bps_count += 1
+        
         return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count)
 def flatten(l):
     return [item for sublist in l for item in sublist]
@@ -446,16 +448,19 @@ class Page:
             return [TwoColumns(output[:half], output[half:])]
 
     def build(self):
+        Page.bps_count = 1
         output = []
         output.append("<style scoped>%s</style>\n" % self.style)
         if self.header is not None:
             output.append(self.header.build())
         if self.display_title:
             output.append(self.title.build())
+            
         for c in self.body:
             output.append(c.build())
         return "\n".join(output)
     def build2(self):
+        Page.bps_count = 1   
         output = []
         if self.header is not None:
             output.append(self.header.build2())
@@ -483,7 +488,7 @@ class TitlePage:
     
     def build2(self):
         output = []
-        output.append(self.generate_title().build2())
+        output.append({"body":self.generate_title().build2()})
         return output
 
 class ImagePage:
@@ -500,6 +505,6 @@ class ImagePage:
     
     def build2(self):
         output = []
-        output.append(self.img_elt.build2())
+        output.append({"body":self.img_elt.build2()})
         return output
         

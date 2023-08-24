@@ -408,10 +408,7 @@ class Page:
     
     def setHeader(self, header):
         self.header = header
-    # def groupElements(elements, cls="img"):
-    #     output = []
-    #     for el in elements:
-    #         if el[""]
+
     def setFooter(self, footer):
         self.footer = footer
 
@@ -429,7 +426,8 @@ class Page:
     def generate_body(self):
 
         output = []
-
+        if self.contents == []:
+            return []
         # ordered or ul list
         if random.random() > 0.15:
             bp_style = "-"
@@ -497,31 +495,49 @@ class Page:
         return output
 
 class TitlePage:
-    def __init__(self, title="", style = "<!-- _class: lead -->"):
+    def __init__(self, title="", header=None, footer=None, style = "<!-- _class: lead -->"):
         self.style = style
         self.title = title
+        self.header = header
+        self.footer = footer
     
     def generate_title(self):
         return Title(self.title, True)
-    
+
+    def setHeader(self, header):
+        self.header = header
+
+    def setFooter(self, footer):
+        self.footer = footer
+
     def build(self):
         output = []
+        if self.header is not None:
+            output.append(self.header.build())
+        if self.footer is not None:
+            output.append(self.footer.build())       
         output.append("%s\n" % self.style)
         output.append(self.generate_title().build())
         return "\n".join(output)
     
     def build2(self):
         output = []
+        if self.header is not None:
+            output.append(self.header.build2())
         output.append({"body":self.generate_title().build2()})
+        if self.footer is not None:
+            output.append(self.footer.build2())
         return output
 
 class ImagePage:
-    def __init__(self, img, title=None, is_bg=False):
+    def __init__(self, img, title=None, is_bg=False, header=None, footer=None):
         self.img = img
         self.is_bg = is_bg
         self.img_elt = Image(self.img, is_bg=is_bg)
         self.title = title
         self.body = self.generateBody()
+        self.header = header
+        self.footer = footer
 
     def generateBody(self):
         body = []
@@ -531,15 +547,31 @@ class ImagePage:
         random.shuffle(body)
         return body
 
+    def setHeader(self, header):
+        self.header = header
+
+    def setFooter(self, footer):
+        self.footer = footer
+        
     def build(self):
         output = []
+        if self.header is not None:
+            output.append(self.header.build())
+        if self.footer is not None:
+            output.append(self.footer.build())
         for c in self.body:
             output.append(c.build())
         return "\n".join(output)
     
     def build2(self):
-        output = {"body":[]}
+        output =  []
+        if self.header is not None:
+            output.append(self.header.build2())
+        body = {"body": []}
         for c in self.body:
-            output["body"].append(c.build2())
+            body["body"].append(c.build2())
+        output.append(body)
+        if self.footer is not None:
+            output.append(self.footer.build2())
         return [output]
         

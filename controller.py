@@ -1,5 +1,5 @@
 from content import Content
-from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground, GradientBackground, ImagePage, Header, Title, Text, Image
+from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground, GradientBackground, ImagePage, Header, Title, Text, Image, Footer
 import json
 import random
 import glob
@@ -7,6 +7,8 @@ import cv2
 import numpy as np
 import distinctipy
 import randomcolor
+import pandas as pd
+
 rand_color = randomcolor.RandomColor()
 bullet_styles = [r"\2022", r"\2299", r"\229A", r"\229B", r"\25C9", r"\29BF", r"\29BE", r"\25C6", r"\25C7", r"\25C8", r"\2731", r"\2724", r"\2732", r"\2726", r"\2727", r"\25A0", r"\2612", r"\25A1", r"\2713", r"\2714", r"\27A2", r"\27A3", r"\27A4", r"\27AE", r"\27B1", r"\25B7", r"\25B8", r"\25B9", r"\25BA", r"\25BB", r"\25FE"]
 
@@ -17,24 +19,77 @@ LINE_HEIGHT = (1.1,1.4)
 PROB_DISPLAY_TITLE = 0.8
 PROB_HEADER = 1
 PROB_FOOTER = 1
-PADDING_RANGE = (80,105)
+PADDING_HEADER_RANGE = (80,105)
+PADDING_BOTTOM_RANGE = (23,40)
 LOGOS_FILES = glob.glob("Logos/*.png") + glob.glob("Logos/*.jpg") + glob.glob("Logos/*.gif")
 border_styles = ["dotted", "dashed", "solid", "double", "groove", "ridge", "inset", "outset"]
+
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+df = pd.read_csv("utils/world-universities.csv")
+universities_data = df.to_dict(orient="list")
+with open("utils/male.txt", "r") as f:
+    male_names = f.read().splitlines() 
+with open("utils/female.txt", "r") as f:
+    female_names = f.read().splitlines() 
+names = male_names + female_names
+def generateRandomDate():
+    random_day_nb = random.randint(1,31)
+    random_year = random.randint(1990, 2099)
+    random_day_name = random.choice(days)
+    random_month = random.choice(months)
+    return "%s %d %s %d" % (random_day_name, random_day_nb, random_month, random_year)
+def generateName():
+    name = random.sample(names, 2)
+    return " ".join(name)
+def generateFooterContent(text_list=[]):
+    uni_name = random.choice(universities_data["names"])
+    uni_url = random.choice(universities_data["url"])
+    date = generateRandomDate()
+    name = generateName()
+    contents = [uni_name, uni_url, date, name] + text_list
+    random.shuffle(contents)
+    return [Text(item) for item in contents if random.random() > 0.5]
+
+def getRandomBackground(color,to="bottom"):
+    if random.random() > 0.5:
+        return "background-image: linear-gradient(to %s,#FFF, %s)" % (to, color)
+    else:
+        return "background-color: %s" % color
+
 
 def generateHeaderStyle(prob_bg=0.5,prob_border=0.5):
     style_choice = ""
     margin = 0
     if random.random() < prob_bg:
-        style_choice += "background-color: {};color: #000;" .format(rand_color.generate(luminosity= 'light')[0])
+        style_choice += "{};color: #000;" .format(getRandomBackground(rand_color.generate(luminosity= 'light')[0]))
     else:
         margin = random.randrange(0,15)
         style_choice += "border-bottom-style: {}; border-width: {}px; border-color:{};".format(random.choice(border_styles), random.randrange(4,8), rand_color.generate(luminosity= 'light')[0])
-    padding_top = random.randrange(PADDING_RANGE[0],PADDING_RANGE[1])
+    padding_top = random.randrange(PADDING_HEADER_RANGE[0],PADDING_HEADER_RANGE[1])
     style = "left: {}%; right: {}%;top: 0;  box-sizing: border-box;font-size: 66%; height: {}px;line-height: 50px;padding: 10px 25px;position: absolute;font-size: 1em;font-weight: 700; display:flex; {}".format(margin, margin, padding_top,style_choice)
 
     # style = ""
     return style, padding_top
-        
+
+def generateFooterStyle(prob_bg=0.33,prob_border=0.33):
+    style_choice = ""
+    margin = 0
+    prob = random.random()
+    padding_bottom = random.randrange(PADDING_BOTTOM_RANGE[0],PADDING_BOTTOM_RANGE[1])
+    if prob < prob_bg:
+        style_choice += "{};color: #000;" .format(getRandomBackground(rand_color.generate(luminosity= 'light')[0], "top"))
+    elif prob < prob_bg + prob_border:
+        margin = random.randrange(0,15)
+        style_choice += "border-top-style: {}; border-width: {}px; border-color:{};".format(random.choice(border_styles), random.randrange(4,8), rand_color.generate(luminosity= 'light')[0])
+    else:
+        return "left: {}%; right: {}%;bottom: 0; box-sizing:border-box; height: {}px;line-height: 0px;display:flex;font-size:0.6em;".format(margin, margin, padding_bottom), padding_bottom
+    
+    style = "left: {}%; right: {}%;bottom: 0;  box-sizing: border-box; height: {}px;line-height: 0px;position: absolute;font-size: 0.6em;font-weight: 700; display:flex; {}".format(margin, margin, padding_bottom,style_choice)
+
+    # style = ""
+    return style, padding_bottom
+
 def createSlide(json_file, name=None):
     ## output : slide markdown, slide json (for pix2struct for example)
     if name is not None:
@@ -50,6 +105,7 @@ def createSlide(json_file, name=None):
     pages = [Page(item, display_title=random.random() < PROB_DISPLAY_TITLE, title=title) for item, title in zip(c.getContents(), titles)]
 
     padding_top = None
+    padding_bottom = None
     if hasHeader:
         styleHeader, padding_top = generateHeaderStyle()
         for i, p in enumerate(pages):
@@ -66,7 +122,17 @@ def createSlide(json_file, name=None):
     # add random image slide for diversity
     random_image = c.getRandomImage()
     if random_image is not None:
-        list_pages += [ImagePage(c.getRandomImage(), is_bg=random.random() > 0.5, title=None if random.random() > 0.5 else c.getRandomTitle()) for i in range(2)]
+        list_pages += [ImagePage(c.getRandomImage(), is_bg=False, title=None if random.random() > 0.5 else c.getRandomTitle()) for i in range(2)]
+
+    # add footer
+    styleFooter, padding_bottom = generateFooterStyle()
+    if random.random() < PROB_HEADER:
+        for p in list_pages:
+            p.setFooter(Footer(generateFooterContent([c.getTitle()])))
+    else:
+        padding_bottom = 0
+    
+            
     
     random.shuffle(list_pages)
     sli = Slide(pages=list_pages)
@@ -90,7 +156,7 @@ def createSlide(json_file, name=None):
         # Get colored background
         sli.setBg(ColoredBackground(distinctipy.get_hex(distinctipy.get_colors(1, pastel_factor=1)[0])))
     elif bg_prob > 0.4:
-        # Get colored background
+        # Get gradient background
         sli.setBg(GradientBackground([distinctipy.get_hex(distinctipy.get_colors(1, pastel_factor=1)[0]), "#FFFFFF"]))
     else:
         # Get random background
@@ -109,6 +175,7 @@ def createSlide(json_file, name=None):
     # Header related
     header_style = ""
     header_related = ""
+    
     if hasHeader:
         header_style = styleHeader
         header_related = "padding-top: %dpx;" % (padding_top + 10)
@@ -117,11 +184,14 @@ def createSlide(json_file, name=None):
     sli.addStyle("header > * {margin: auto;}")
 
     # Footer related
+    # sli.addStyle("footer {left:0; right:0; bottom:0; display:flex;font-size:0.5em;background-color:%s}" % rand_color.generate(luminosity= 'light')[0])
+    sli.addStyle("footer {%s}" % styleFooter)
     sli.addStyle("footer > * {margin: auto;}")
 
     ## Style
     # Section related
-    sli.addStyle("section {display: flex;flex-flow: column; font-size:%.3fpx; letter-spacing:%.3fpx; line-height: %.3f; %s}" % (random.uniform(FONT_SIZE[0],FONT_SIZE[1]), random.uniform(LETTER_SPACING[0], LETTER_SPACING[1]), random.uniform(LINE_HEIGHT[0], LINE_HEIGHT[1]), header_related))
+    footer_related = "padding-bottom:%dpx" % (padding_bottom + 10)
+    sli.addStyle("section {display: flex;flex-flow: column; font-size:%.3fpx; letter-spacing:%.3fpx; line-height: %.3f; %s; %s;}" % (random.uniform(FONT_SIZE[0],FONT_SIZE[1]), random.uniform(LETTER_SPACING[0], LETTER_SPACING[1]), random.uniform(LINE_HEIGHT[0], LINE_HEIGHT[1]), header_related, footer_related))
 
 
     # Bullet point related

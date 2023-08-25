@@ -17,8 +17,8 @@ FONT_SIZE = (29,35)
 LETTER_SPACING = (1.3,1.4)
 LINE_HEIGHT = (1.1,1.4)
 PROB_DISPLAY_TITLE = 0.8
-PROB_HEADER = 1
-PROB_FOOTER = 1
+PROB_HEADER = 0.4
+PROB_FOOTER = 0.4
 PADDING_HEADER_RANGE = (80,105)
 PADDING_BOTTOM_RANGE = (23,40)
 LOGOS_FILES = glob.glob("Logos/*.png") + glob.glob("Logos/*.jpg") + glob.glob("Logos/*.gif")
@@ -42,14 +42,15 @@ def generateRandomDate():
 def generateName():
     name = random.sample(names, 2)
     return " ".join(name)
-def generateFooterContent(text_list=[]):
+def generateFooterContent(text_list=[], filter_content=-1, proba=0.5):
     uni_name = random.choice(universities_data["names"])
     uni_url = random.choice(universities_data["url"])
     date = generateRandomDate()
     name = generateName()
-    contents = [uni_name, uni_url, date, name] + text_list
+    contents_before_filtered = text_list + [uni_name, name, uni_url, date]
+    contents = contents_before_filtered[:filter_content]
     random.shuffle(contents)
-    return [Text(item) for item in contents if random.random() > 0.5]
+    return [Text(item) for item in contents if random.random() < proba]
 
 def getRandomBackground(color,to="bottom"):
     if random.random() > 0.5:
@@ -81,7 +82,8 @@ def generateFooterStyle(prob_bg=0.33,prob_border=0.33):
         style_choice += "{};color: #000;" .format(getRandomBackground(rand_color.generate(luminosity= 'light')[0], "top"))
     elif prob < prob_bg + prob_border:
         margin = random.randrange(0,15)
-        style_choice += "border-top-style: {}; border-width: {}px; border-color:{};".format(random.choice(border_styles), random.randrange(4,8), rand_color.generate(luminosity= 'light')[0])
+        top_or_btm = "top" if random.random() > 0.5 else "bottom"
+        style_choice += "border-{}-style: {}; border-width: {}px; border-color:{};".format(top_or_btm,random.choice(border_styles), random.randrange(4,8), rand_color.generate(luminosity= 'light')[0])
     else:
         return "left: {}%; right: {}%;bottom: 0; box-sizing:border-box; height: {}px;line-height: 0px;display:flex;font-size:0.6em;".format(margin, margin, padding_bottom), padding_bottom
     
@@ -111,13 +113,14 @@ def createSlide(json_file, name=None):
         for i, p in enumerate(pages):
             if random.random() < 0.3:
                 p.setDisplayTitle(False)
-                header_content = [Title(titles[i])]
+                header_content = [Title(titles[i])] + generateFooterContent([c.getTitle()], filter_content=3, proba=0.2)
                 if random.random() > 0.5:
-                    header_content.append(Image("../../" + random.choice(LOGOS_FILES), classe="logo",is_header=True))
+                    header_content.append(Image("" + random.choice(LOGOS_FILES), classe="logo",is_header=True))
                     random.shuffle(header_content)
                 p.setHeader(Header(header_content))
             else:
-                p.setHeader(Header([]))
+                header_content = generateFooterContent([c.getTitle()], filter_content=3, proba=0.2)
+                p.setHeader(Header(header_content))
     list_pages = [title_page] + pages
     # add random image slide for diversity
     random_image = c.getRandomImage()

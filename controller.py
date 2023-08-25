@@ -115,7 +115,7 @@ def createSlide(json_file, name=None):
                 p.setDisplayTitle(False)
                 header_content = [Title(titles[i])] + generateFooterContent([c.getTitle()], filter_content=3, proba=0.2)
                 if random.random() > 0.5:
-                    header_content.append(Image("" + random.choice(LOGOS_FILES), classe="logo",is_header=True))
+                    header_content.append(Image("../../" + random.choice(LOGOS_FILES), classe="logo",is_header=True))
                     random.shuffle(header_content)
                 p.setHeader(Header(header_content))
             else:

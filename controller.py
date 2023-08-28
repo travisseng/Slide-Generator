@@ -125,7 +125,9 @@ def createSlide(json_file, name=None):
     # add random image slide for diversity
     random_image = c.getRandomImage()
     if random_image is not None:
+
         list_pages += [ImagePage(c.getRandomImage(), is_bg=False, title=None if random.random() > 0.5 else c.getRandomTitle()) for i in range(2)]
+
 
     # add footer
     styleFooter, padding_bottom = generateFooterStyle()
@@ -154,7 +156,8 @@ def createSlide(json_file, name=None):
     bg_prob = random.random()
     if bg_prob > 0.6:
         # Get white background
-        sli.setBg(ColoredBackground("white"))
+        # sli.setBg(ColoredBackground("white"))
+        pass
     elif bg_prob > 0.5:
         # Get colored background
         sli.setBg(ColoredBackground(distinctipy.get_hex(distinctipy.get_colors(1, pastel_factor=1)[0])))
@@ -172,7 +175,7 @@ def createSlide(json_file, name=None):
 
     ## THEME
     # select random theme
-    themes = ["default", "uncover", "gaia"]
+    themes = ["default", "uncover", "gaia", "dracula", "border", "graph_paper", "academic", "gradient", "rose-pine", "rose-pine-dawn"]
     sli.setTheme(random.choice(themes))
 
     # Header related
@@ -185,6 +188,7 @@ def createSlide(json_file, name=None):
     sli.addStyle("header {overflow:visible; color: inherit; %s}" % header_style)
     # sli.addStyle("header > div.logo {position:absolute; top: 0px; right:15px; height: 75px;}")
     sli.addStyle("header > * {margin: auto;}")
+    sli.addStyle("header > p {font-size:0.6em !important;} ")
 
     # Footer related
     # sli.addStyle("footer {left:0; right:0; bottom:0; display:flex;font-size:0.5em;background-color:%s}" % rand_color.generate(luminosity= 'light')[0])

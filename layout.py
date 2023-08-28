@@ -377,6 +377,33 @@ class TwoColumns:
             output.append(cnt.build2())
         return output
 
+class Columns:
+    
+    def __init__(self, contents = [[]], c_size=[3,3,3]) -> None:
+        self.contents = contents
+        self.c_size = c_size
+        self.output = []
+    def build(self):
+        self.output.append(Style(grid_col_x.format(np.sum(self.c_size))))
+        for i,col in enumerate(self.contents):
+            self.output.append(Style(col_span_x.format(self.c_size[i])))
+            self.output = self.output + col
+            self.output.append(close_div)
+        # nb_elements_right = len(self.right_contents)
+        # font_size_right = 1.0 - 0.065*nb_elements_right
+        self.output.append(close_div)
+        o = []
+        for c in self.output:
+            # print(c)
+            o.append(c.build())
+        return "\n".join(o)
+    def build2(self):
+        output = []
+        for col in self.contents:
+            for cnt in col:
+                output.append(cnt.build2())
+        return output
+    
 def convertToElement(content, bp_style = "-"):
     if content["cls"] == "img":
         return Image(content["image"], caption=content["caption"])
@@ -454,16 +481,24 @@ class Page:
         random.shuffle(output)
         ## BODY CONTENT
         # single column
-        if random.random() < 0.5:
+        prob = random.random()
+        if prob < 0.5:
             output = flatten(output)
             return output
-        else: # double column
+        elif prob < 0.9: # double column
             output = flatten(output)
             random.shuffle(output)
             half = len(output) // 2
             # left_c = output[0]
             # right_c = output[1]
-            return [TwoColumns(output[:half], output[half:])]
+            return [Columns([output[:half], output[half:]], c_size=[3,3])]
+        else: # double column
+            output = flatten(output)
+            random.shuffle(output)
+            third = len(output) // 3
+            # left_c = output[0]
+            # right_c = output[1]
+            return [Columns([output[:third], output[third:third+1], output[third+1:]], c_size=[3,3, 3])]
 
     def build(self):
         Page.bps_count = 1

@@ -56,9 +56,9 @@ class Content:
         output = []
         for slide_content in self.contents:
             if "images" in slide_content.keys():
-                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [dict(item, **{'cls':'img'}) for item in slide_content["images"]]}
+                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [dict(item, **{'cls':'img'}) for item in slide_content["images"]], "equations": slide_content["equations"] if "equations" in slide_content.keys() else []}
             else:
-                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": []}
+                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [], "equations": slide_content["equations"] if "equations" in slide_content.keys() else []}
             output.append(new_dict)
         return output
     

@@ -8,11 +8,13 @@ import numpy as np
 import distinctipy
 import randomcolor
 import pandas as pd
+from faker import Faker
+fake = Faker()
 
 rand_color = randomcolor.RandomColor()
 bullet_styles = [r"\2022", r"\2299", r"\229A", r"\229B", r"\25C9", r"\29BF", r"\29BE", r"\25C6", r"\25C7", r"\25C8", r"\2731", r"\2724", r"\2732", r"\2726", r"\2727", r"\25A0", r"\2612", r"\25A1", r"\2713", r"\2714", r"\27A2", r"\27A3", r"\27A4", r"\27AE", r"\27B1", r"\25B7", r"\25B8", r"\25B9", r"\25BA", r"\25BB", r"\25FE"]
 
-
+MAX_FOOTER_CONTENT = 3
 FONT_SIZE = (29,35)
 LETTER_SPACING = (1.3,1.4)
 LINE_HEIGHT = (1.1,1.4)
@@ -42,15 +44,29 @@ def generateRandomDate():
 def generateName():
     name = random.sample(names, 2)
     return " ".join(name)
+# def generateFooterContent(text_list=[], filter_content=-1, proba=0.5):
+#     uni_name = random.choice(universities_data["names"])
+#     uni_url = random.choice(universities_data["url"])
+#     date = generateRandomDate()
+#     name = generateName()
+#     contents_before_filtered = text_list + [uni_name, name, uni_url, date]
+#     contents = contents_before_filtered[:filter_content]
+#     random.shuffle(contents)
+#     return [Text(item) for item in contents if random.random() < proba]
+
 def generateFooterContent(text_list=[], filter_content=-1, proba=0.5):
-    uni_name = random.choice(universities_data["names"])
-    uni_url = random.choice(universities_data["url"])
     date = generateRandomDate()
-    name = generateName()
-    contents_before_filtered = text_list + [uni_name, name, uni_url, date]
+    uni_name = random.choice(universities_data["names"])
+    name = fake.name()
+    company = fake.company()
+    url = fake.url()
+    email = fake.ascii_email()
+    catch_phrase = fake.catch_phrase()
+    contents_before_filtered = text_list + [uni_name, name, url, email, catch_phrase, company, date]
     contents = contents_before_filtered[:filter_content]
     random.shuffle(contents)
-    return [Text(item) for item in contents if random.random() < proba]
+    output = [Text(item) for item in contents if random.random() < proba]
+    return output[:MAX_FOOTER_CONTENT]
 
 def getRandomBackground(color,to="bottom"):
     if random.random() > 0.5:
@@ -177,6 +193,10 @@ def createSlide(json_file, name=None):
     # select random theme
     themes = ["default", "uncover", "gaia", "dracula", "border", "graph_paper", "academic", "gradient", "rose-pine", "rose-pine-dawn"]
     sli.setTheme(random.choice(themes))
+
+    # theme related
+    if random.random() > 0.5:
+        sli.addStyle(":root {--border-color: #ffffff;}")
 
     # Header related
     header_style = ""

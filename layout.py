@@ -40,7 +40,9 @@ class Slide:
 
             output.append("paginate: True")
             if self.paginate_total:
-                self.addStyle("section::after {content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);}")
+                self.addStyle("section::after {height:auto;padding:0;content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);}")
+            else:
+                self.addStyle("section::after {height:auto;padding:0;bottom:0;}")
         ## style options
         output.append("style: |\n   @import url('https://unpkg.com/tailwindcss@2.2.19/dist/utilities.min.css');")
         for style in self.style:
@@ -168,7 +170,7 @@ class BulletPoint:
         else:
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
-                output.append({"text": "+ %s" % (bp)})
+                output.append({"text": "+" + "%s" % (bp)})
         return output
 
 
@@ -181,12 +183,18 @@ class BlockCode:
                                        self.language, self.text)
         return output
 
-    
+import re
 class Equation:
     def __init__(self, text) -> None:
         self.text = text
+        display_style = re.search(r"{\\displaystyle (.*)}", self.text)
+        if display_style is not None:
+            self.text = display_style.group(1)
     def build(self):
         output = "$$%s$$" % (self.text)
+        return output
+    def build2(self):
+        output = {"text": self.text}
         return output
     
 class Image:
@@ -416,6 +424,7 @@ def flatten(l):
     return [item for sublist in l for item in sublist]
 
 MAX_NB_IMG = 6
+MAX_NB_EQUATIONS = 3
 class Page:
 
     bps_count = 0
@@ -468,15 +477,26 @@ class Page:
         
         txt_elements = [convertToElement(item, bp_style) for item in self.contents["text"]]
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
+        figures_elements = self.contents["equations"] if "equations" in self.contents.keys() else []
 
 
-        output.append(txt_elements)
-        output.append(img_elements)
+
+
 
         ## adjust text size based on number of elements
         nb_txt_elts = len(txt_elements)
         nb_img_elts = min(len(self.contents["images"]), MAX_NB_IMG)
+
+        
         self.addPageStyle("p,li {font-size:%.2fem}" % (1.0 - (nb_txt_elts+nb_img_elts)*0.04))
+
+        ## add elements
+        output.append(txt_elements)
+        if nb_img_elts > 0:
+            output.append(img_elements)
+        if len(figures_elements) > 0:
+            random.shuffle(figures_elements)
+            output.append([Equation(item) for item in figures_elements[:MAX_NB_EQUATIONS]])
 
         random.shuffle(output)
         ## BODY CONTENT
@@ -485,10 +505,11 @@ class Page:
         if prob < 0.5:
             output = flatten(output)
             return output
-        elif prob < 0.9: # double column
+        elif prob < 0.93: # double column
             output = flatten(output)
             random.shuffle(output)
             half = len(output) // 2
+
             # left_c = output[0]
             # right_c = output[1]
             return [Columns([output[:half], output[half:]], c_size=[3,3])]
@@ -584,9 +605,15 @@ class ImagePage:
 
     def setHeader(self, header):
         self.header = header
+    
+    def hasHeader(self):
+        return self.header is not None
 
     def setFooter(self, footer):
         self.footer = footer
+
+    def hasFooter(self):
+        return self.footer is not None
         
     def build(self):
         output = []

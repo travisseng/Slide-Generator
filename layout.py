@@ -74,7 +74,7 @@ class Slide:
                 else:
                     page_output.append({"page_nb": i+1})
                 
-            output.append({"slide": page_output})
+            output.append(page_output)
         return output
 
 class ColoredBackground:
@@ -170,7 +170,7 @@ class BulletPoint:
         else:
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
-                output.append({"text": "+" + "%s" % (bp)})
+                output.append({"text": "+ %s" % (bp)})
         return output
 
 

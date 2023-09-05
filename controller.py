@@ -1,5 +1,5 @@
 from content import Content
-from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground, GradientBackground, ImagePage, Header, Title, Text, Image, Footer
+from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground, GradientBackground, ImagePage, Header, Title, Text, Image, Footer, Table
 import json
 import random
 import glob
@@ -143,7 +143,9 @@ def createSlide(json_file, name=None):
     if random_image is not None:
 
         list_pages += [ImagePage(c.getRandomImage(), is_bg=False, title=None if random.random() > 0.5 else c.getRandomTitle()) for i in range(2)]
-
+    random_table = c.getRandomTable()
+    if random_table is not None:
+        list_pages += [TitlePage(c.getRandomTitle(), [Table(random_table)], style="")]
 
     # add footer
     styleFooter, padding_bottom = generateFooterStyle()
@@ -226,7 +228,7 @@ def createSlide(json_file, name=None):
     return sli.build(), sli.build2()
 
 if __name__ == "__main__":
-    sli_md, sli_json = createSlide("/home/travis/Documents/these/projects/Slide-Generator/sum_slide.json", "Photography")
+    sli_md, sli_json = createSlide("/home/travis/Documents/these/projects/Slide-Generator/mathematics.json", "Mathematics")
     with open("test.md", "w") as f:
         f.write(sli_md)
     with open("test.json", "w") as f:

@@ -56,9 +56,9 @@ class Content:
         output = []
         for slide_content in self.contents:
             if "images" in slide_content.keys():
-                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [dict(item, **{'cls':'img'}) for item in slide_content["images"]], "equations": slide_content["equations"] if "equations" in slide_content.keys() else []}
+                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [dict(item, **{'cls':'img'}) for item in slide_content["images"]], "equations": slide_content["equations"] if "equations" in slide_content.keys() else [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
             else:
-                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [], "equations": slide_content["equations"] if "equations" in slide_content.keys() else []}
+                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [], "equations": slide_content["equations"] if "equations" in slide_content.keys() else [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
             output.append(new_dict)
         return output
     
@@ -83,3 +83,16 @@ class Content:
     def getRandomTitle(self):
         titles = self.getTitles()
         return random.choice(titles)
+    
+    def getTables(self):
+        contents = self.getContents()
+        img_list = [item["tables"] for item in contents if len(item["tables"]) > 0]
+        flat_list = [item for sublist in img_list for item in sublist]
+        return flat_list
+
+    def getRandomTable(self):
+        tables = self.getTables()
+        if len(tables) > 0:
+            return random.choice(tables)
+        else:
+            return None

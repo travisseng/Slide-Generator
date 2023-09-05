@@ -229,6 +229,19 @@ class Image:
     def setDisplayCaption(self, bool):
         self.display_caption = bool
 
+class Table:
+    def __init__(self, table, classe = ""):
+        self.table = table
+        self.classe = classe
+    def build(self):
+        output = '<div class="%s" style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; overflow:hidden; font-size:0.5em !important;">\n' % self.classe
+        output = output + self.table
+        output = output + "\n</div>\n"
+        return output
+    def build2(self):
+        # return {"img": self.caption}
+        return {"table": ""}
+
 class HorizontalImages:
     def __init__(self, imgs, caption = "", display_caption=False, is_bg=False, orientation="left", width = None, option = "height:350px", height_percentage=80):
         self.imgs = imgs
@@ -551,8 +564,9 @@ class Page:
         return output
 
 class TitlePage:
-    def __init__(self, title="", header=None, footer=None, style = "<!-- _class: lead -->"):
+    def __init__(self, title="", content=[], header=None, footer=None, style = "<!-- _class: lead -->"):
         self.style = style
+        self.content = content
         self.title = title
         self.header = header
         self.footer = footer
@@ -574,13 +588,18 @@ class TitlePage:
             output.append(self.footer.build())       
         output.append("%s\n" % self.style)
         output.append(self.generate_title().build())
+        for c in self.content:
+            output.append(c.build())
         return "\n".join(output)
     
     def build2(self):
         output = []
         if self.header is not None:
             output.append(self.header.build2())
-        output.append({"body":self.generate_title().build2()})
+        body = [self.generate_title().build2()]
+        for c in self.content:
+            body.append(c.build2())
+        output.append({"body": body})
         if self.footer is not None:
             output.append(self.footer.build2())
         return output

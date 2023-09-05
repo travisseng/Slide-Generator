@@ -226,7 +226,8 @@ def createSlide(json_file, name=None):
     return sli.build(), sli.build2()
 
 if __name__ == "__main__":
-    sli_md, sli_json = createSlide("/home/travis/Documents/these/projects/Slide-Generator/sum_slide.json", "Photography")
+    random.choice(glob.glob("../slide_generator/output/*/sum_slide.json"))
+    sli_md, sli_json = createSlide(random.choice(glob.glob("../slide_generator/output/*/sum_slide.json")))
     with open("test.md", "w") as f:
         f.write(sli_md)
     with open("test.json", "w") as f:

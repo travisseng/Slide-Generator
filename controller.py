@@ -144,6 +144,8 @@ def createSlide(json_file, name=None):
 
         list_pages += [ImagePage(c.getRandomImage(), is_bg=False, title=None if random.random() > 0.5 else c.getRandomTitle()) for i in range(2)]
     random_table = c.getRandomTable()
+
+    #add random tables
     if random_table is not None:
         list_pages += [TitlePage(c.getRandomTitle(), [Table(random_table)], style="")]
 

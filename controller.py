@@ -15,9 +15,9 @@ rand_color = randomcolor.RandomColor()
 bullet_styles = [r"\2022", r"\2299", r"\229A", r"\229B", r"\25C9", r"\29BF", r"\29BE", r"\25C6", r"\25C7", r"\25C8", r"\2731", r"\2724", r"\2732", r"\2726", r"\2727", r"\25A0", r"\2612", r"\25A1", r"\2713", r"\2714", r"\27A2", r"\27A3", r"\27A4", r"\27AE", r"\27B1", r"\25B7", r"\25B8", r"\25B9", r"\25BA", r"\25BB", r"\25FE"]
 
 MAX_FOOTER_CONTENT = 3
-FONT_SIZE = (29,35)
+FONT_SIZE = (29,45)
 LETTER_SPACING = (1.3,1.4)
-LINE_HEIGHT = (1.1,1.4)
+LINE_HEIGHT = (1.1,2)
 PROB_DISPLAY_TITLE = 0.8
 PROB_HEADER = 0.4
 PROB_FOOTER = 0.4
@@ -53,8 +53,17 @@ def generateName():
 #     contents = contents_before_filtered[:filter_content]
 #     random.shuffle(contents)
 #     return [Text(item) for item in contents if random.random() < proba]
-
-def generateFooterContent(text_list=[], filter_content=-1, proba=0.5):
+def generateRandomPageNb():
+    page_a = random.randint(1,100)
+    page_b = random.randint(1,100)
+    format_rand = random.random()
+    if format_rand < 0.6:
+        return "%d" % (page_a)
+    elif format_rand < 0.9:
+        return "%d/%d" % (min(page_a, page_b), max(page_a, page_b))
+    else:
+        return "Slide %d" % page_a
+def generateFooterContent(text_list=[], filter_content=0, proba=0.5):
     date = generateRandomDate()
     uni_name = random.choice(universities_data["names"])
     name = fake.name()
@@ -62,8 +71,12 @@ def generateFooterContent(text_list=[], filter_content=-1, proba=0.5):
     url = fake.url()
     email = fake.ascii_email()
     catch_phrase = fake.catch_phrase()
-    contents_before_filtered = text_list + [uni_name, name, url, email, catch_phrase, company, date]
-    contents = contents_before_filtered[:filter_content]
+    page_nb = generateRandomPageNb()
+    contents_before_filtered = text_list + [uni_name, name, url, email, catch_phrase, company, date, page_nb]
+    if filter_content == 0:
+        contents = contents_before_filtered
+    else:
+        contents = contents_before_filtered[:filter_content]
     random.shuffle(contents)
     output = [Text(item) for item in contents if random.random() < proba]
     return output[:MAX_FOOTER_CONTENT]
@@ -164,13 +177,14 @@ def createSlide(json_file, name=None):
 
     # Customize template and style
     ## Paginate
-    if random.random() > 0.2:
-        if random.random() > 0.4:
-            sli.setPaginate(True,total = False)
-        else:
-            sli.setPaginate(True, total = True)
-    else:
-        sli.setPaginate(False)
+    # if random.random() > 0.2:
+    #     if random.random() > 0.4:
+    #         sli.setPaginate(True,total = False)
+    #     else:
+    #         sli.setPaginate(True, total = True)
+    # else:
+    #     sli.setPaginate(False)
+    sli.setPaginate(False)
 
     ## BACKGROUND
     bg_prob = random.random()

@@ -122,11 +122,11 @@ class Title:
         if self.rand:
             if random.random() > 0.7:
                 rand_orn = random.choice(ornement)
-                return " # " + "{}{}{}".format(rand_orn,self.text,rand_orn)
+                return " ## " + "{}{}{}".format(rand_orn,self.text,rand_orn)
             else:
-                return " # " + self.text
+                return " ## " + self.text
         else:
-            return " # " + self.text
+            return " ## " + self.text
     def build2(self):
         return {"title": self.text}
 
@@ -580,8 +580,12 @@ class TitlePage:
     def setFooter(self, footer):
         self.footer = footer
 
+    def addPageStyle(self, style):
+        self.style = self.style + style
+
     def build(self):
         output = []
+        self.addPageStyle("<style scoped>p,li {font-size:%.2fem}</style>" % (1.0 - len(self.content)*0.04))
         if self.header is not None:
             output.append(self.header.build())
         if self.footer is not None:

@@ -16,7 +16,7 @@ palette in :root
     --surface: #fffaf3;
     --overlay: #f2e9e1;
     --muted: #9893a5;
-    --subtle: #797593;
+    --subtle: #575279;
     --text: #575279;
     --love: #b4637a;
     --gold: #ea9d34;
@@ -62,7 +62,7 @@ a {
 }
 p {
     font-size: 20pt;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--text);
 }
 code {

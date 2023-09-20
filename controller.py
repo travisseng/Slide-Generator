@@ -9,6 +9,7 @@ import distinctipy
 import randomcolor
 import pandas as pd
 from faker import Faker
+import utils
 fake = Faker()
 
 rand_color = randomcolor.RandomColor()
@@ -244,9 +245,16 @@ def createSlide(json_file, name=None):
     return sli.build(), sli.build2()
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     random.choice(glob.glob("../slide_generator/output/*/sum_slide.json"))
     sli_md, sli_json = createSlide(random.choice(glob.glob("../slide_generator/output/*/sum_slide.json")))
+=======
+    sli_md, sli_json = createSlide("/home/travis/Documents/these/projects/Slide-Generator/sum_slide_2.json", "Mathematics")
+>>>>>>> 1d53cf3a42514b31278d7000ee5c6f550c61d5ee
     with open("test.md", "w") as f:
         f.write(sli_md)
     with open("test.json", "w") as f:
         f.write(json.dumps(sli_json))
+    print(sli_json[0]["slide"])
+    with open("test_output.md", "w") as f:
+        f.write(utils.dict2markdown(sli_json[0]["slide"]))

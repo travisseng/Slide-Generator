@@ -134,8 +134,13 @@ class Text:
     def __init__(self, text) -> None:
         self.text = text
     def build(self):
-        return "\n" + self.text
+        Page.previous_element = self
+        if self.text[0] == "+":
+            return "\n" + self.text
+        else:
+            return "\n" + "<p>%s</p>\n" % self.text
     def build2(self):
+        Page.previous_element = self
         return {"text": self.text}
 
 
@@ -145,33 +150,71 @@ class BulletPoint:
         self.style = style
         self.lvl = lvl
         self.count = count
+    def makeIndent(self):
+        if Page.indent_count == -1:
+            Page.indent_count = 0
+        print(Page.previous_element)
+        if isinstance(Page.previous_element, BulletPoint):
+            print("yo")
+            
+            if Page.indent_count == 0:
+                if random.random() < 0.35:
+                    Page.indent_count = 1
+            elif Page.indent_count == 1:
+                if random.random() < 0.5:
+                    Page.indent_count = 0
+                elif random.random() < 0.6:
+                    Page.indent_count = 2
+                else:
+                    Page.indent_count = 1
+            elif Page.indent_count == 2:
+                if random.random() < 0.8:
+                    Page.indent_count = 0
+                else:
+                    Page.indent_count = 2
+        else:
+            Page.indent_count = -1
+        self.lvl = Page.indent_count
+            
     def build(self):
+        
+        
+        self.makeIndent()
+        
         output = ""
         if self.style == "-":
             for i, bp in enumerate(self.bps):
-                for i in range(self.lvl):
-                    output = output + " "
-                output = output + "- " + bp + "\n"
+                # for i in range(self.lvl):
+                #     output = output + " "
+
+                output = output + "    " * self.lvl + "- " +  bp + "\n"
         elif self.style == ".":
             for i, bp in enumerate(self.bps):
                 for i in range(self.lvl):
                     output = output + " "
                 output = output + "%i. " % Page.bps_count + bp + "\n"
                 Page.bps_count += 1            
+        Page.previous_element = self
         return output[:-1] # remove last line return
     def build2(self):
         # output = {"bps":[]}
+        # self.makeIndent()
         output = []
         if self.style == ".":
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
-                output.append({"text": "%d. %s" % (Page.bps_count, bp)})
+                output.append({"text": "%i. %s" % (Page.bps_count, bp)})
                 Page.bps_count += 1   
         else:
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
-                output.append({"text": "+ %s" % (bp)})
-        return output
+
+                output.append({"text":"    " * self.lvl + "+ " +  "%s" % (bp)})
+        Page.previous_element = self
+        if len(output) == 1:
+            return output[0]
+        else:
+            return output
 
 
 class BlockCode:
@@ -192,6 +235,7 @@ class Equation:
             self.text = display_style.group(1)
     def build(self):
         output = "$$%s$$" % (self.text)
+        Page.previous_element = self
         return output
     def build2(self):
         # output = {"text": self.text}
@@ -210,6 +254,7 @@ class Image:
         self.classe = classe
         self.is_header = is_header
     def build(self):
+        Page.previous_element = self
         if self.is_bg:
             return "![bg contain](%s)" % self.img
         if self.is_header:
@@ -223,9 +268,11 @@ class Image:
                 # print(self.caption)
                 # output = output + '\n <p style="text-align: center;">%s</p>' % self.caption
                 output = output + "\n \n" + self.caption
+            
             return output
     def build2(self):
         # return {"img": self.caption}
+        Page.previous_element = self
         return {"img": ""}
     def setDisplayCaption(self, bool):
         self.display_caption = bool
@@ -235,11 +282,13 @@ class Table:
         self.table = table
         self.classe = classe
     def build(self):
+        Page.previous_element = self
         output = '<div class="%s" style="display: flex; flex: 1 1 auto; justify-content: center;min-height:0;min-width:0; overflow:hidden; font-size:0.5em !important;">\n' % self.classe
         output = output + self.table
         output = output + "\n</div>\n"
         return output
     def build2(self):
+        Page.previous_element = self
         # return {"img": self.caption}
         return {"table": ""}
 
@@ -410,6 +459,9 @@ class Columns:
         for i,col in enumerate(self.contents):
             self.output.append(Style(col_span_x.format(self.c_size[i])))
             self.output = self.output + col
+            Page.previous_element = None
+            Page.indent_count = -1
+            print("close column")
             self.output.append(close_div)
         # nb_elements_right = len(self.right_contents)
         # font_size_right = 1.0 - 0.065*nb_elements_right
@@ -417,13 +469,22 @@ class Columns:
         o = []
         for c in self.output:
             # print(c)
+            
             o.append(c.build())
         return "\n".join(o)
     def build2(self):
         output = []
         for col in self.contents:
             for cnt in col:
-                output.append(cnt.build2())
+                cnt2 = cnt.build2()
+                if isinstance(cnt2, list):
+                    
+                    output = output + cnt2
+                
+                else:
+                    output.append(cnt2)
+                Page.previous_element = None
+                Page.indent_count = -1
         return output
     
 def convertToElement(content, bp_style = "-"):
@@ -433,15 +494,16 @@ def convertToElement(content, bp_style = "-"):
         return Text(content["cnt"])
     elif content["cls"] == "bp":
         
-        return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count)
+        return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count, lvl=0)
 def flatten(l):
     return [item for sublist in l for item in sublist]
 
 MAX_NB_IMG = 6
 MAX_NB_EQUATIONS = 3
 class Page:
-
+    previous_element = None
     bps_count = 0
+    indent_count = -1
 
     def __init__(self, contents=[], display_title=True, title=None, header=None, footer=None):
         self.contents = contents
@@ -536,7 +598,9 @@ class Page:
             return [Columns([output[:third], output[third:third+1], output[third+1:]], c_size=[3,3, 3])]
 
     def build(self):
+        
         Page.bps_count = 1
+        Page.indent_count = -1
         output = []
         output.append("<style scoped>%s</style>\n" % self.style)
         if self.header is not None:
@@ -547,10 +611,12 @@ class Page:
             output.append(self.title.build())
             
         for c in self.body:
+
             output.append(c.build())
         return "\n".join(output)
     def build2(self):
-        Page.bps_count = 1   
+        Page.bps_count = 1
+        Page.indent_count = -1
         output = []
         if self.header is not None:
             output.append(self.header.build2())
@@ -558,7 +624,13 @@ class Page:
         if self.display_title:
             body.append(self.title.build2())
         for c in self.body:
-            body.append(c.build2())
+            
+            c2 = c.build2()
+            if isinstance(c2, list):
+                body = body + c2
+                
+            else:
+                body.append(c2)
         output.append({'body' : body})
         if self.footer is not None:
             output.append(self.footer.build2())
@@ -603,7 +675,10 @@ class TitlePage:
             output.append(self.header.build2())
         body = [self.generate_title().build2()]
         for c in self.content:
-            body.append(c.build2())
+            if isinstance(c, list):
+                body = body + c.build2()
+            else:
+                body.append(c.build2())
         output.append({"body": body})
         if self.footer is not None:
             output.append(self.footer.build2())
@@ -659,5 +734,5 @@ class ImagePage:
         output.append(body)
         if self.footer is not None:
             output.append(self.footer.build2())
-        return [output]
+        return output
         

@@ -194,7 +194,8 @@ class Equation:
         output = "$$%s$$" % (self.text)
         return output
     def build2(self):
-        output = {"text": self.text}
+        # output = {"text": self.text}
+        output = {"equation": self.text}
         return output
     
 class Image:
@@ -332,7 +333,7 @@ class Header:
     def build(self):
         output = '<header>\n\n'
         for c in self.contents:
-            output += c.build() + '\n'
+            output += c.build() + '\n\n'
         return output + '</header>\n'
     def build2(self):
         output = {"header":[]}

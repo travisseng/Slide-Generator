@@ -41,5 +41,5 @@ for pdf_file in tqdm.tqdm(pdf_files):
         pix = page.get_pixmap()
         img_path = "output/%s/images/%s.%03d.jpg" % (pdf_nb, pdf_nb, page.number)
         with Image.frombytes("RGB", [pix.width, pix.height], pix.samples) as im:
-            im.save(img_path, quality=90)
+            im.save(img_path, quality=95)
         

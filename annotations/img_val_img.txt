@@ -1,0 +1,457 @@
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/images/Imperial examination.049.jpg
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/images/Imperial examination.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/images/Imperial examination.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/images/Imperial examination.024.jpg
+/home/tseng/projects/slide_generator_clean/output/Western world/images/Western world.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Western world/images/Western world.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Kepler/images/Kepler.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Integer factorization/images/Integer factorization.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Autochrome Lumière/images/Autochrome Lumière.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Euclid's Elements/images/Euclid's Elements.018.jpg
+/home/tseng/projects/slide_generator_clean/output/Euclid's Elements/images/Euclid's Elements.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Unknown (algebra)/images/Unknown (algebra).012.jpg
+/home/tseng/projects/slide_generator_clean/output/Western Europe/images/Western Europe.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Western Europe/images/Western Europe.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Probability/images/Probability.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Vorticity/images/Vorticity.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Boundary condition/images/Boundary condition.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Gelatin silver process/images/Gelatin silver process.008.jpg
+/home/tseng/projects/slide_generator_clean/output/CPK coloring/images/CPK coloring.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Syracuse, Italy/images/Syracuse, Italy.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Venn diagram/images/Venn diagram.001.jpg
+/home/tseng/projects/slide_generator_clean/output/René Descartes/images/René Descartes.021.jpg
+/home/tseng/projects/slide_generator_clean/output/René Descartes/images/René Descartes.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Butterfly/images/Butterfly.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Butterfly/images/Butterfly.024.jpg
+/home/tseng/projects/slide_generator_clean/output/Spiritualist/images/Spiritualist.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Central limit theorem/images/Central limit theorem.030.jpg
+/home/tseng/projects/slide_generator_clean/output/Quadratic formula/images/Quadratic formula.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Quadratic formula/images/Quadratic formula.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Eddy current/images/Eddy current.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Calculus/images/Calculus.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Parallel postulate/images/Parallel postulate.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Finite geometry/images/Finite geometry.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Stereoscopy/images/Stereoscopy.030.jpg
+/home/tseng/projects/slide_generator_clean/output/Stereoscopy/images/Stereoscopy.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Prime number/images/Prime number.019.jpg
+/home/tseng/projects/slide_generator_clean/output/Greek alphabet/images/Greek alphabet.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Elementary algebra/images/Elementary algebra.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Equation/images/Equation.023.jpg
+/home/tseng/projects/slide_generator_clean/output/Equation/images/Equation.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Lie group/images/Lie group.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Field (mathematics)/images/Field (mathematics).021.jpg
+/home/tseng/projects/slide_generator_clean/output/Still camera/images/Still camera.030.jpg
+/home/tseng/projects/slide_generator_clean/output/Still camera/images/Still camera.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Slit-scan photography/images/Slit-scan photography.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Magnetizing field/images/Magnetizing field.039.jpg
+/home/tseng/projects/slide_generator_clean/output/Lorentz force/images/Lorentz force.009.jpg
+/home/tseng/projects/slide_generator_clean/output/History of electromagnetic theory/images/History of electromagnetic theory.026.jpg
+/home/tseng/projects/slide_generator_clean/output/Electrical network/images/Electrical network.018.jpg
+/home/tseng/projects/slide_generator_clean/output/World War II/images/World War II.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Mathematics Subject Classification/images/Mathematics Subject Classification.009.jpg
+/home/tseng/projects/slide_generator_clean/output/List of electromagnetism equations/images/List of electromagnetism equations.008.jpg
+/home/tseng/projects/slide_generator_clean/output/List of electromagnetism equations/images/List of electromagnetism equations.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Electron/images/Electron.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Electron/images/Electron.027.jpg
+/home/tseng/projects/slide_generator_clean/output/Einstein/images/Einstein.050.jpg
+/home/tseng/projects/slide_generator_clean/output/Einstein/images/Einstein.059.jpg
+/home/tseng/projects/slide_generator_clean/output/Einstein/images/Einstein.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Raw image format/images/Raw image format.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Kurt Gödel/images/Kurt Gödel.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Kurt Gödel/images/Kurt Gödel.001.jpg
+/home/tseng/projects/slide_generator_clean/output/View camera/images/View camera.001.jpg
+/home/tseng/projects/slide_generator_clean/output/View camera/images/View camera.005.jpg
+/home/tseng/projects/slide_generator_clean/output/View camera/images/View camera.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Tests of general relativity/images/Tests of general relativity.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Photographic film/images/Photographic film.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Technology/images/Technology.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Mathematics and art/images/Mathematics and art.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Mordançage/images/Mordançage.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Michael Faraday/images/Michael Faraday.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Islamic Golden Age/images/Islamic Golden Age.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Human activity/images/Human activity.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Humphry Davy/images/Humphry Davy.024.jpg
+/home/tseng/projects/slide_generator_clean/output/Gradient/images/Gradient.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Collodion process/images/Collodion process.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Collodion process/images/Collodion process.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Collodion process/images/Collodion process.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Advanced Photo System/images/Advanced Photo System.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Sphere packing/images/Sphere packing.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Sphere packing/images/Sphere packing.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Lists of mathematics topics/images/Lists of mathematics topics.032.jpg
+/home/tseng/projects/slide_generator_clean/output/Trigonometry/images/Trigonometry.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Arthur H. Robinson/images/Arthur H. Robinson.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Addition/images/Addition.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Number theory/images/Number theory.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Medicine/images/Medicine.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Dust/images/Dust.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Magnetic-core memory/images/Magnetic-core memory.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Frame of reference/images/Frame of reference.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Maxwell's equations/images/Maxwell's equations.018.jpg
+/home/tseng/projects/slide_generator_clean/output/Maxwell's equations/images/Maxwell's equations.024.jpg
+/home/tseng/projects/slide_generator_clean/output/Prehistoric/images/Prehistoric.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Color space/images/Color space.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Flickr/images/Flickr.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Flickr/images/Flickr.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Two-body problem in general relativity/images/Two-body problem in general relativity.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Ring (mathematics)/images/Ring (mathematics).027.jpg
+/home/tseng/projects/slide_generator_clean/output/Ring (mathematics)/images/Ring (mathematics).028.jpg
+/home/tseng/projects/slide_generator_clean/output/Ring (mathematics)/images/Ring (mathematics).013.jpg
+/home/tseng/projects/slide_generator_clean/output/Pythagoras/images/Pythagoras.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Pythagoras/images/Pythagoras.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Scanography/images/Scanography.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Science of photography/images/Science of photography.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Science of photography/images/Science of photography.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Science of photography/images/Science of photography.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Celestial mechanics/images/Celestial mechanics.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Renaissance/images/Renaissance.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Renaissance/images/Renaissance.028.jpg
+/home/tseng/projects/slide_generator_clean/output/Renaissance/images/Renaissance.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Topology/images/Topology.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Christian Goldbach/images/Christian Goldbach.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Chemical imaging/images/Chemical imaging.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Tensor/images/Tensor.019.jpg
+/home/tseng/projects/slide_generator_clean/output/Tensor/images/Tensor.023.jpg
+/home/tseng/projects/slide_generator_clean/output/Foundations of mathematics/images/Foundations of mathematics.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Alfred Tarski/images/Alfred Tarski.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Alfred Tarski/images/Alfred Tarski.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Photography and the law/images/Photography and the law.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Cartography/images/Cartography.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Cartography/images/Cartography.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Complex number/images/Complex number.035.jpg
+/home/tseng/projects/slide_generator_clean/output/Complex number/images/Complex number.042.jpg
+/home/tseng/projects/slide_generator_clean/output/Integral calculus/images/Integral calculus.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Helsinki/images/Helsinki.029.jpg
+/home/tseng/projects/slide_generator_clean/output/Helsinki/images/Helsinki.032.jpg
+/home/tseng/projects/slide_generator_clean/output/Helsinki/images/Helsinki.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Molecular physics/images/Molecular physics.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Ancient Greece/images/Ancient Greece.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Babylonian mathematics/images/Babylonian mathematics.006.jpg
+/home/tseng/projects/slide_generator_clean/output/World line/images/World line.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Black hole/images/Black hole.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Joan Moschovakis/images/Joan Moschovakis.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Magnetic field/images/Magnetic field.030.jpg
+/home/tseng/projects/slide_generator_clean/output/Leyden jar/images/Leyden jar.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Projective geometry/images/Projective geometry.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Digital single-lens reflex camera/images/Digital single-lens reflex camera.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Charles Sanders Peirce/images/Charles Sanders Peirce.027.jpg
+/home/tseng/projects/slide_generator_clean/output/Charles Sanders Peirce/images/Charles Sanders Peirce.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Multiplication/images/Multiplication.020.jpg
+/home/tseng/projects/slide_generator_clean/output/ISSN (identifier)/images/ISSN (identifier).003.jpg
+/home/tseng/projects/slide_generator_clean/output/Large format/images/Large format.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Flash (photography)/images/Flash (photography).013.jpg
+/home/tseng/projects/slide_generator_clean/output/Underwater photography/images/Underwater photography.004.jpg
+/home/tseng/projects/slide_generator_clean/output/X-ray/images/X-ray.006.jpg
+/home/tseng/projects/slide_generator_clean/output/X-ray/images/X-ray.007.jpg
+/home/tseng/projects/slide_generator_clean/output/X-ray/images/X-ray.002.jpg
+/home/tseng/projects/slide_generator_clean/output/X-ray/images/X-ray.014.jpg
+/home/tseng/projects/slide_generator_clean/output/X-ray/images/X-ray.012.jpg
+/home/tseng/projects/slide_generator_clean/output/X-ray/images/X-ray.020.jpg
+/home/tseng/projects/slide_generator_clean/output/High-speed photography/images/High-speed photography.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Newton's laws of motion/images/Newton's laws of motion.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Wiles's proof of Fermat's Last Theorem/images/Wiles's proof of Fermat's Last Theorem.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Approximation/images/Approximation.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Differential geometry/images/Differential geometry.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Differential geometry/images/Differential geometry.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Saint Augustine/images/Saint Augustine.036.jpg
+/home/tseng/projects/slide_generator_clean/output/Pythagorean theorem/images/Pythagorean theorem.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Pythagorean theorem/images/Pythagorean theorem.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Photography in Vietnam/images/Photography in Vietnam.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Covariant formulation of classical electromagnetism/images/Covariant formulation of classical electromagnetism.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Ptolemy/images/Ptolemy.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Virgo interferometer/images/Virgo interferometer.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Profit (economics)/images/Profit (economics).005.jpg
+/home/tseng/projects/slide_generator_clean/output/Profit (economics)/images/Profit (economics).006.jpg
+/home/tseng/projects/slide_generator_clean/output/Focal length/images/Focal length.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Focal length/images/Focal length.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Mathematical optimization/images/Mathematical optimization.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Internet/images/Internet.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Oceanography/images/Oceanography.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Visualization (graphics)/images/Visualization (graphics).006.jpg
+/home/tseng/projects/slide_generator_clean/output/World War II in Yugoslavia/images/World War II in Yugoslavia.026.jpg
+/home/tseng/projects/slide_generator_clean/output/World War II in Yugoslavia/images/World War II in Yugoslavia.003.jpg
+/home/tseng/projects/slide_generator_clean/output/World War II in Yugoslavia/images/World War II in Yugoslavia.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Bremsstrahlung/images/Bremsstrahlung.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Infrared photography/images/Infrared photography.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Human eye/images/Human eye.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Zone System/images/Zone System.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Complex systems/images/Complex systems.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Kepler conjecture/images/Kepler conjecture.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Wave equation/images/Wave equation.024.jpg
+/home/tseng/projects/slide_generator_clean/output/Wave equation/images/Wave equation.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Raymond Clare Archibald/images/Raymond Clare Archibald.004.jpg
+/home/tseng/projects/slide_generator_clean/output/History of physics/images/History of physics.026.jpg
+/home/tseng/projects/slide_generator_clean/output/History of physics/images/History of physics.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic tensor/images/Electromagnetic tensor.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Unit normal/images/Unit normal.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Differential geometry and topology/images/Differential geometry and topology.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Algebraic topology/images/Algebraic topology.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Gordon Kindlmann/images/Gordon Kindlmann.008.jpg
+/home/tseng/projects/slide_generator_clean/output/William Thomson, 1st Baron Kelvin/images/William Thomson, 1st Baron Kelvin.028.jpg
+/home/tseng/projects/slide_generator_clean/output/Differential calculus/images/Differential calculus.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Leonhard Euler/images/Leonhard Euler.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Rangefinder camera/images/Rangefinder camera.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Rangefinder camera/images/Rangefinder camera.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Tintype/images/Tintype.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Henri Poincaré/images/Henri Poincaré.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Henri Poincaré/images/Henri Poincaré.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Aristotle/images/Aristotle.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Logic/images/Logic.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Latin language/images/Latin language.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Probability distribution/images/Probability distribution.027.jpg
+/home/tseng/projects/slide_generator_clean/output/Probability distribution/images/Probability distribution.028.jpg
+/home/tseng/projects/slide_generator_clean/output/Geometric shape/images/Geometric shape.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Albumen print/images/Albumen print.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Smartphone/images/Smartphone.032.jpg
+/home/tseng/projects/slide_generator_clean/output/Graphic design/images/Graphic design.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Bar magnet/images/Bar magnet.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Parallel (geometry)/images/Parallel (geometry).004.jpg
+/home/tseng/projects/slide_generator_clean/output/Visual perception/images/Visual perception.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/images/Ancient Egypt.037.jpg
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/images/Ancient Egypt.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/images/Ancient Egypt.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/images/Ancient Egypt.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Relation (mathematics)/images/Relation (mathematics).012.jpg
+/home/tseng/projects/slide_generator_clean/output/Magnetism/images/Magnetism.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Magnetism/images/Magnetism.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Manifold/images/Manifold.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic radiation/images/Electromagnetic radiation.025.jpg
+/home/tseng/projects/slide_generator_clean/output/Nonclassical light/images/Nonclassical light.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Finite element analysis/images/Finite element analysis.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Power grid/images/Power grid.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Rounding error/images/Rounding error.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Carl Friedrich Gauss/images/Carl Friedrich Gauss.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Carl Friedrich Gauss/images/Carl Friedrich Gauss.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Carl Friedrich Gauss/images/Carl Friedrich Gauss.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Homotopy theory/images/Homotopy theory.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Mesopotamia/images/Mesopotamia.000.jpg
+/home/tseng/projects/slide_generator_clean/output/CERN/images/CERN.003.jpg
+/home/tseng/projects/slide_generator_clean/output/International Organization for Standardization/images/International Organization for Standardization.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic spectrum/images/Electromagnetic spectrum.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Axiom/images/Axiom.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Axiom/images/Axiom.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Ancient China/images/Ancient China.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Space (mathematics)/images/Space (mathematics).012.jpg
+/home/tseng/projects/slide_generator_clean/output/Space (mathematics)/images/Space (mathematics).004.jpg
+/home/tseng/projects/slide_generator_clean/output/Space (mathematics)/images/Space (mathematics).008.jpg
+/home/tseng/projects/slide_generator_clean/output/Frame-dragging/images/Frame-dragging.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Theorem/images/Theorem.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Image sharing/images/Image sharing.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Electric generator/images/Electric generator.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Nikola Tesla/images/Nikola Tesla.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Nikola Tesla/images/Nikola Tesla.019.jpg
+/home/tseng/projects/slide_generator_clean/output/Nikola Tesla/images/Nikola Tesla.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Statistical decision theory/images/Statistical decision theory.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Astrology/images/Astrology.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Panoramic photography/images/Panoramic photography.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Panoramic photography/images/Panoramic photography.015.jpg
+/home/tseng/projects/slide_generator_clean/output/View from the Window at Le Gras/images/View from the Window at Le Gras.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Michael Atiyah/images/Michael Atiyah.000.jpg
+/home/tseng/projects/slide_generator_clean/output/University of Cambridge/images/University of Cambridge.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Analog photography/images/Analog photography.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Analog photography/images/Analog photography.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Theoretical computer science/images/Theoretical computer science.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Plato/images/Plato.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Relativity of simultaneity/images/Relativity of simultaneity.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Afocal photography/images/Afocal photography.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Ellipse/images/Ellipse.034.jpg
+/home/tseng/projects/slide_generator_clean/output/Digital printing/images/Digital printing.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Digital printing/images/Digital printing.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Positron/images/Positron.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Stephen Hawking/images/Stephen Hawking.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Reversal film/images/Reversal film.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Active-pixel sensor/images/Active-pixel sensor.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Press camera/images/Press camera.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Spacetime/images/Spacetime.028.jpg
+/home/tseng/projects/slide_generator_clean/output/Spacetime/images/Spacetime.032.jpg
+/home/tseng/projects/slide_generator_clean/output/Spacetime/images/Spacetime.027.jpg
+/home/tseng/projects/slide_generator_clean/output/Thermodynamics/images/Thermodynamics.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Vector (geometric)/images/Vector (geometric).001.jpg
+/home/tseng/projects/slide_generator_clean/output/Parabola/images/Parabola.051.jpg
+/home/tseng/projects/slide_generator_clean/output/Parabola/images/Parabola.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Kirlian photography/images/Kirlian photography.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Particle physics/images/Particle physics.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Computer/images/Computer.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Primary color/images/Primary color.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Humidity/images/Humidity.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Kip Thorne/images/Kip Thorne.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Sports photography/images/Sports photography.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Salah/images/Salah.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Salah/images/Salah.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Equals sign/images/Equals sign.025.jpg
+/home/tseng/projects/slide_generator_clean/output/Hipparchus of Nicaea/images/Hipparchus of Nicaea.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Hipparchus of Nicaea/images/Hipparchus of Nicaea.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Hipparchus of Nicaea/images/Hipparchus of Nicaea.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Fashionable Nonsense/images/Fashionable Nonsense.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Astrophotography/images/Astrophotography.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Mathematical psychology/images/Mathematical psychology.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Alessandro Volta/images/Alessandro Volta.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Alessandro Volta/images/Alessandro Volta.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Composition (visual arts)/images/Composition (visual arts).016.jpg
+/home/tseng/projects/slide_generator_clean/output/Pythagoreanism/images/Pythagoreanism.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Dora Musielak/images/Dora Musielak.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Architecture/images/Architecture.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Infographic/images/Infographic.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Plane (geometry)/images/Plane (geometry).001.jpg
+/home/tseng/projects/slide_generator_clean/output/Exposure (photography)/images/Exposure (photography).012.jpg
+/home/tseng/projects/slide_generator_clean/output/Apollonius of Perga/images/Apollonius of Perga.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Areas of mathematics/images/Areas of mathematics.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Areas of mathematics/images/Areas of mathematics.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Magnetic monopole/images/Magnetic monopole.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Isaac Newton/images/Isaac Newton.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Isaac Newton/images/Isaac Newton.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Infinite series/images/Infinite series.025.jpg
+/home/tseng/projects/slide_generator_clean/output/Logical disjunction/images/Logical disjunction.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Logical disjunction/images/Logical disjunction.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Geodetic effect/images/Geodetic effect.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Instant camera/images/Instant camera.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Photographic filter/images/Photographic filter.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Quaternion/images/Quaternion.032.jpg
+/home/tseng/projects/slide_generator_clean/output/Quaternion/images/Quaternion.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Color/images/Color.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Charge-coupled device/images/Charge-coupled device.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Charge-coupled device/images/Charge-coupled device.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Abstract algebra/images/Abstract algebra.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Position vector/images/Position vector.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Francis Galton/images/Francis Galton.028.jpg
+/home/tseng/projects/slide_generator_clean/output/Photographic plate/images/Photographic plate.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Rorschach test/images/Rorschach test.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Frequency/images/Frequency.004.jpg
+/home/tseng/projects/slide_generator_clean/output/History of mathematics/images/History of mathematics.007.jpg
+/home/tseng/projects/slide_generator_clean/output/History of mathematics/images/History of mathematics.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Voltage/images/Voltage.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Einstein field equations/images/Einstein field equations.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Pictorialism/images/Pictorialism.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Digital camera/images/Digital camera.018.jpg
+/home/tseng/projects/slide_generator_clean/output/Ohm's law/images/Ohm's law.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Ohm's law/images/Ohm's law.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Ohm's law/images/Ohm's law.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Tang dynasty/images/Tang dynasty.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Subtraction/images/Subtraction.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Insulator (electricity)/images/Insulator (electricity).013.jpg
+/home/tseng/projects/slide_generator_clean/output/Alcubierre drive/images/Alcubierre drive.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Alcubierre drive/images/Alcubierre drive.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Eugene Wigner/images/Eugene Wigner.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Leibniz/images/Leibniz.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Lorenz force/images/Lorenz force.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Optics/images/Optics.018.jpg
+/home/tseng/projects/slide_generator_clean/output/Optics/images/Optics.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Optics/images/Optics.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Introduction to general relativity/images/Introduction to general relativity.016.jpg
+/home/tseng/projects/slide_generator_clean/output/New SI/images/New SI.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Dark Age/images/Dark Age.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Greek language/images/Greek language.020.jpg
+/home/tseng/projects/slide_generator_clean/output/François Viète/images/François Viète.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Geomagnetic storm/images/Geomagnetic storm.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Apsidal precession/images/Apsidal precession.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Statistics/images/Statistics.028.jpg
+/home/tseng/projects/slide_generator_clean/output/Edmond Halley/images/Edmond Halley.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Ladder paradox/images/Ladder paradox.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Information visualization/images/Information visualization.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Information visualization/images/Information visualization.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Russell's paradox/images/Russell's paradox.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Mathematical analysis/images/Mathematical analysis.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Computer-assisted proof/images/Computer-assisted proof.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Gauss's law for magnetism/images/Gauss's law for magnetism.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Multiple exposure/images/Multiple exposure.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Nobel Prize/images/Nobel Prize.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Nobel Prize/images/Nobel Prize.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Camera/images/Camera.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Risk/images/Risk.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Euler/images/Euler.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Emmy Noether/images/Emmy Noether.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Siméon Denis Poisson/images/Siméon Denis Poisson.003.jpg
+/home/tseng/projects/slide_generator_clean/output/A Mathematician's Apology/images/A Mathematician's Apology.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Computer algebra/images/Computer algebra.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Computer algebra/images/Computer algebra.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Kite aerial photography/images/Kite aerial photography.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Rational number/images/Rational number.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Clinical trial/images/Clinical trial.023.jpg
+/home/tseng/projects/slide_generator_clean/output/Generating series/images/Generating series.022.jpg
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/images/Coulomb's law.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/images/Coulomb's law.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/images/Coulomb's law.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/images/Coulomb's law.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Microcomputer/images/Microcomputer.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Toy camera/images/Toy camera.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Equivalence principle/images/Equivalence principle.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Daguerreotype/images/Daguerreotype.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Electrostatics/images/Electrostatics.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Complex analysis/images/Complex analysis.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Waveguide (electromagnetism)/images/Waveguide (electromagnetism).008.jpg
+/home/tseng/projects/slide_generator_clean/output/Molecular graphics/images/Molecular graphics.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic wave equation/images/Electromagnetic wave equation.014.jpg
+/home/tseng/projects/slide_generator_clean/output/List of largest photographs/images/List of largest photographs.003.jpg
+/home/tseng/projects/slide_generator_clean/output/LIGO/images/LIGO.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Economics/images/Economics.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Economics/images/Economics.042.jpg
+/home/tseng/projects/slide_generator_clean/output/Economics/images/Economics.027.jpg
+/home/tseng/projects/slide_generator_clean/output/Random sampling/images/Random sampling.025.jpg
+/home/tseng/projects/slide_generator_clean/output/Particle/images/Particle.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Archimedes/images/Archimedes.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Visual arts/images/Visual arts.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Visual arts/images/Visual arts.021.jpg
+/home/tseng/projects/slide_generator_clean/output/Early modern period/images/Early modern period.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Early modern period/images/Early modern period.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic waves/images/Electromagnetic waves.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Quantum field theory/images/Quantum field theory.001.jpg
+/home/tseng/projects/slide_generator_clean/output/Geometry/images/Geometry.027.jpg
+/home/tseng/projects/slide_generator_clean/output/John Dee/images/John Dee.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Matrix theory/images/Matrix theory.018.jpg
+/home/tseng/projects/slide_generator_clean/output/Computational physics/images/Computational physics.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Open problem/images/Open problem.006.jpg
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/images/W. E. B. Du Bois.042.jpg
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/images/W. E. B. Du Bois.013.jpg
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/images/W. E. B. Du Bois.037.jpg
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/images/W. E. B. Du Bois.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Engineering/images/Engineering.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Engineering/images/Engineering.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Engineering/images/Engineering.019.jpg
+/home/tseng/projects/slide_generator_clean/output/Prime lens/images/Prime lens.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Cyclic group/images/Cyclic group.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Psychology/images/Psychology.019.jpg
+/home/tseng/projects/slide_generator_clean/output/Psychology/images/Psychology.020.jpg
+/home/tseng/projects/slide_generator_clean/output/Psychology/images/Psychology.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Solids of revolution/images/Solids of revolution.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Massimo Pigliucci/images/Massimo Pigliucci.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Spherical trigonometry/images/Spherical trigonometry.027.jpg
+/home/tseng/projects/slide_generator_clean/output/Oral tradition/images/Oral tradition.013.jpg
+/home/tseng/projects/slide_generator_clean/output/Self-similarity/images/Self-similarity.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Dispersion (optics)/images/Dispersion (optics).011.jpg
+/home/tseng/projects/slide_generator_clean/output/Polyhedron/images/Polyhedron.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Continuous functions/images/Continuous functions.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Proofs from THE BOOK/images/Proofs from THE BOOK.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Proofs from THE BOOK/images/Proofs from THE BOOK.010.jpg
+/home/tseng/projects/slide_generator_clean/output/SI system/images/SI system.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Image/images/Image.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Holography/images/Holography.009.jpg
+/home/tseng/projects/slide_generator_clean/output/Mathematical economics/images/Mathematical economics.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Fractals/images/Fractals.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Gelatin process/images/Gelatin process.005.jpg
+/home/tseng/projects/slide_generator_clean/output/Gauss's law/images/Gauss's law.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Light cone/images/Light cone.000.jpg
+/home/tseng/projects/slide_generator_clean/output/BKL singularity/images/BKL singularity.014.jpg
+/home/tseng/projects/slide_generator_clean/output/Sir John Herschel/images/Sir John Herschel.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Aperture/images/Aperture.003.jpg
+/home/tseng/projects/slide_generator_clean/output/Electrical impedance/images/Electrical impedance.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Tripod head/images/Tripod head.017.jpg
+/home/tseng/projects/slide_generator_clean/output/Muhammad ibn Musa al-Khwarizmi/images/Muhammad ibn Musa al-Khwarizmi.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Covariant derivative/images/Covariant derivative.008.jpg
+/home/tseng/projects/slide_generator_clean/output/Cicero/images/Cicero.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Cicero/images/Cicero.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Engineering drawing/images/Engineering drawing.037.jpg
+/home/tseng/projects/slide_generator_clean/output/A Greek–English Lexicon/images/A Greek–English Lexicon.011.jpg
+/home/tseng/projects/slide_generator_clean/output/Hypothesis testing/images/Hypothesis testing.012.jpg
+/home/tseng/projects/slide_generator_clean/output/Earth's magnetic field/images/Earth's magnetic field.018.jpg
+/home/tseng/projects/slide_generator_clean/output/Hardy-Weinberg principle/images/Hardy-Weinberg principle.007.jpg
+/home/tseng/projects/slide_generator_clean/output/Roberta Millstein/images/Roberta Millstein.000.jpg
+/home/tseng/projects/slide_generator_clean/output/Roberta Millstein/images/Roberta Millstein.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Modular arithmetic/images/Modular arithmetic.006.jpg
+/home/tseng/projects/slide_generator_clean/output/Fermat's Last theorem/images/Fermat's Last theorem.019.jpg
+/home/tseng/projects/slide_generator_clean/output/Fermat's Last theorem/images/Fermat's Last theorem.004.jpg
+/home/tseng/projects/slide_generator_clean/output/Exclusive or/images/Exclusive or.015.jpg
+/home/tseng/projects/slide_generator_clean/output/Nuclear physics/images/Nuclear physics.016.jpg
+/home/tseng/projects/slide_generator_clean/output/Logarithm/images/Logarithm.010.jpg
+/home/tseng/projects/slide_generator_clean/output/Logarithm/images/Logarithm.031.jpg
+/home/tseng/projects/slide_generator_clean/output/Acid/images/Acid.002.jpg
+/home/tseng/projects/slide_generator_clean/output/Physical oceanography/images/Physical oceanography.006.jpg

@@ -1,0 +1,457 @@
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/labels/Imperial examination.049.txt
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/labels/Imperial examination.015.txt
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/labels/Imperial examination.031.txt
+/home/tseng/projects/slide_generator_clean/output/Imperial examination/labels/Imperial examination.024.txt
+/home/tseng/projects/slide_generator_clean/output/Western world/labels/Western world.002.txt
+/home/tseng/projects/slide_generator_clean/output/Western world/labels/Western world.006.txt
+/home/tseng/projects/slide_generator_clean/output/Kepler/labels/Kepler.000.txt
+/home/tseng/projects/slide_generator_clean/output/Integer factorization/labels/Integer factorization.007.txt
+/home/tseng/projects/slide_generator_clean/output/Autochrome Lumière/labels/Autochrome Lumière.011.txt
+/home/tseng/projects/slide_generator_clean/output/Euclid's Elements/labels/Euclid's Elements.018.txt
+/home/tseng/projects/slide_generator_clean/output/Euclid's Elements/labels/Euclid's Elements.014.txt
+/home/tseng/projects/slide_generator_clean/output/Unknown (algebra)/labels/Unknown (algebra).012.txt
+/home/tseng/projects/slide_generator_clean/output/Western Europe/labels/Western Europe.008.txt
+/home/tseng/projects/slide_generator_clean/output/Western Europe/labels/Western Europe.016.txt
+/home/tseng/projects/slide_generator_clean/output/Probability/labels/Probability.001.txt
+/home/tseng/projects/slide_generator_clean/output/Vorticity/labels/Vorticity.001.txt
+/home/tseng/projects/slide_generator_clean/output/Boundary condition/labels/Boundary condition.007.txt
+/home/tseng/projects/slide_generator_clean/output/Gelatin silver process/labels/Gelatin silver process.008.txt
+/home/tseng/projects/slide_generator_clean/output/CPK coloring/labels/CPK coloring.008.txt
+/home/tseng/projects/slide_generator_clean/output/Syracuse, Italy/labels/Syracuse, Italy.013.txt
+/home/tseng/projects/slide_generator_clean/output/Venn diagram/labels/Venn diagram.001.txt
+/home/tseng/projects/slide_generator_clean/output/René Descartes/labels/René Descartes.021.txt
+/home/tseng/projects/slide_generator_clean/output/René Descartes/labels/René Descartes.011.txt
+/home/tseng/projects/slide_generator_clean/output/Butterfly/labels/Butterfly.021.txt
+/home/tseng/projects/slide_generator_clean/output/Butterfly/labels/Butterfly.024.txt
+/home/tseng/projects/slide_generator_clean/output/Spiritualist/labels/Spiritualist.009.txt
+/home/tseng/projects/slide_generator_clean/output/Central limit theorem/labels/Central limit theorem.030.txt
+/home/tseng/projects/slide_generator_clean/output/Quadratic formula/labels/Quadratic formula.011.txt
+/home/tseng/projects/slide_generator_clean/output/Quadratic formula/labels/Quadratic formula.006.txt
+/home/tseng/projects/slide_generator_clean/output/Eddy current/labels/Eddy current.006.txt
+/home/tseng/projects/slide_generator_clean/output/Calculus/labels/Calculus.003.txt
+/home/tseng/projects/slide_generator_clean/output/Parallel postulate/labels/Parallel postulate.000.txt
+/home/tseng/projects/slide_generator_clean/output/Finite geometry/labels/Finite geometry.007.txt
+/home/tseng/projects/slide_generator_clean/output/Stereoscopy/labels/Stereoscopy.030.txt
+/home/tseng/projects/slide_generator_clean/output/Stereoscopy/labels/Stereoscopy.020.txt
+/home/tseng/projects/slide_generator_clean/output/Prime number/labels/Prime number.019.txt
+/home/tseng/projects/slide_generator_clean/output/Greek alphabet/labels/Greek alphabet.001.txt
+/home/tseng/projects/slide_generator_clean/output/Elementary algebra/labels/Elementary algebra.010.txt
+/home/tseng/projects/slide_generator_clean/output/Equation/labels/Equation.023.txt
+/home/tseng/projects/slide_generator_clean/output/Equation/labels/Equation.016.txt
+/home/tseng/projects/slide_generator_clean/output/Lie group/labels/Lie group.001.txt
+/home/tseng/projects/slide_generator_clean/output/Field (mathematics)/labels/Field (mathematics).021.txt
+/home/tseng/projects/slide_generator_clean/output/Still camera/labels/Still camera.030.txt
+/home/tseng/projects/slide_generator_clean/output/Still camera/labels/Still camera.007.txt
+/home/tseng/projects/slide_generator_clean/output/Slit-scan photography/labels/Slit-scan photography.006.txt
+/home/tseng/projects/slide_generator_clean/output/Magnetizing field/labels/Magnetizing field.039.txt
+/home/tseng/projects/slide_generator_clean/output/Lorentz force/labels/Lorentz force.009.txt
+/home/tseng/projects/slide_generator_clean/output/History of electromagnetic theory/labels/History of electromagnetic theory.026.txt
+/home/tseng/projects/slide_generator_clean/output/Electrical network/labels/Electrical network.018.txt
+/home/tseng/projects/slide_generator_clean/output/World War II/labels/World War II.006.txt
+/home/tseng/projects/slide_generator_clean/output/Mathematics Subject Classification/labels/Mathematics Subject Classification.009.txt
+/home/tseng/projects/slide_generator_clean/output/List of electromagnetism equations/labels/List of electromagnetism equations.008.txt
+/home/tseng/projects/slide_generator_clean/output/List of electromagnetism equations/labels/List of electromagnetism equations.010.txt
+/home/tseng/projects/slide_generator_clean/output/Electron/labels/Electron.010.txt
+/home/tseng/projects/slide_generator_clean/output/Electron/labels/Electron.027.txt
+/home/tseng/projects/slide_generator_clean/output/Einstein/labels/Einstein.050.txt
+/home/tseng/projects/slide_generator_clean/output/Einstein/labels/Einstein.059.txt
+/home/tseng/projects/slide_generator_clean/output/Einstein/labels/Einstein.011.txt
+/home/tseng/projects/slide_generator_clean/output/Raw image format/labels/Raw image format.011.txt
+/home/tseng/projects/slide_generator_clean/output/Kurt Gödel/labels/Kurt Gödel.015.txt
+/home/tseng/projects/slide_generator_clean/output/Kurt Gödel/labels/Kurt Gödel.001.txt
+/home/tseng/projects/slide_generator_clean/output/View camera/labels/View camera.001.txt
+/home/tseng/projects/slide_generator_clean/output/View camera/labels/View camera.005.txt
+/home/tseng/projects/slide_generator_clean/output/View camera/labels/View camera.010.txt
+/home/tseng/projects/slide_generator_clean/output/Tests of general relativity/labels/Tests of general relativity.017.txt
+/home/tseng/projects/slide_generator_clean/output/Photographic film/labels/Photographic film.021.txt
+/home/tseng/projects/slide_generator_clean/output/Technology/labels/Technology.001.txt
+/home/tseng/projects/slide_generator_clean/output/Mathematics and art/labels/Mathematics and art.007.txt
+/home/tseng/projects/slide_generator_clean/output/Mordançage/labels/Mordançage.008.txt
+/home/tseng/projects/slide_generator_clean/output/Michael Faraday/labels/Michael Faraday.006.txt
+/home/tseng/projects/slide_generator_clean/output/Islamic Golden Age/labels/Islamic Golden Age.006.txt
+/home/tseng/projects/slide_generator_clean/output/Human activity/labels/Human activity.001.txt
+/home/tseng/projects/slide_generator_clean/output/Humphry Davy/labels/Humphry Davy.024.txt
+/home/tseng/projects/slide_generator_clean/output/Gradient/labels/Gradient.022.txt
+/home/tseng/projects/slide_generator_clean/output/Collodion process/labels/Collodion process.011.txt
+/home/tseng/projects/slide_generator_clean/output/Collodion process/labels/Collodion process.004.txt
+/home/tseng/projects/slide_generator_clean/output/Collodion process/labels/Collodion process.006.txt
+/home/tseng/projects/slide_generator_clean/output/Advanced Photo System/labels/Advanced Photo System.006.txt
+/home/tseng/projects/slide_generator_clean/output/Sphere packing/labels/Sphere packing.014.txt
+/home/tseng/projects/slide_generator_clean/output/Sphere packing/labels/Sphere packing.009.txt
+/home/tseng/projects/slide_generator_clean/output/Lists of mathematics topics/labels/Lists of mathematics topics.032.txt
+/home/tseng/projects/slide_generator_clean/output/Trigonometry/labels/Trigonometry.011.txt
+/home/tseng/projects/slide_generator_clean/output/Arthur H. Robinson/labels/Arthur H. Robinson.001.txt
+/home/tseng/projects/slide_generator_clean/output/Addition/labels/Addition.020.txt
+/home/tseng/projects/slide_generator_clean/output/Number theory/labels/Number theory.011.txt
+/home/tseng/projects/slide_generator_clean/output/Medicine/labels/Medicine.005.txt
+/home/tseng/projects/slide_generator_clean/output/Dust/labels/Dust.013.txt
+/home/tseng/projects/slide_generator_clean/output/Magnetic-core memory/labels/Magnetic-core memory.001.txt
+/home/tseng/projects/slide_generator_clean/output/Frame of reference/labels/Frame of reference.007.txt
+/home/tseng/projects/slide_generator_clean/output/Maxwell's equations/labels/Maxwell's equations.018.txt
+/home/tseng/projects/slide_generator_clean/output/Maxwell's equations/labels/Maxwell's equations.024.txt
+/home/tseng/projects/slide_generator_clean/output/Prehistoric/labels/Prehistoric.017.txt
+/home/tseng/projects/slide_generator_clean/output/Color space/labels/Color space.005.txt
+/home/tseng/projects/slide_generator_clean/output/Flickr/labels/Flickr.016.txt
+/home/tseng/projects/slide_generator_clean/output/Flickr/labels/Flickr.000.txt
+/home/tseng/projects/slide_generator_clean/output/Two-body problem in general relativity/labels/Two-body problem in general relativity.003.txt
+/home/tseng/projects/slide_generator_clean/output/Ring (mathematics)/labels/Ring (mathematics).027.txt
+/home/tseng/projects/slide_generator_clean/output/Ring (mathematics)/labels/Ring (mathematics).028.txt
+/home/tseng/projects/slide_generator_clean/output/Ring (mathematics)/labels/Ring (mathematics).013.txt
+/home/tseng/projects/slide_generator_clean/output/Pythagoras/labels/Pythagoras.021.txt
+/home/tseng/projects/slide_generator_clean/output/Pythagoras/labels/Pythagoras.031.txt
+/home/tseng/projects/slide_generator_clean/output/Scanography/labels/Scanography.001.txt
+/home/tseng/projects/slide_generator_clean/output/Science of photography/labels/Science of photography.002.txt
+/home/tseng/projects/slide_generator_clean/output/Science of photography/labels/Science of photography.000.txt
+/home/tseng/projects/slide_generator_clean/output/Science of photography/labels/Science of photography.011.txt
+/home/tseng/projects/slide_generator_clean/output/Celestial mechanics/labels/Celestial mechanics.009.txt
+/home/tseng/projects/slide_generator_clean/output/Renaissance/labels/Renaissance.008.txt
+/home/tseng/projects/slide_generator_clean/output/Renaissance/labels/Renaissance.028.txt
+/home/tseng/projects/slide_generator_clean/output/Renaissance/labels/Renaissance.003.txt
+/home/tseng/projects/slide_generator_clean/output/Topology/labels/Topology.015.txt
+/home/tseng/projects/slide_generator_clean/output/Christian Goldbach/labels/Christian Goldbach.004.txt
+/home/tseng/projects/slide_generator_clean/output/Chemical imaging/labels/Chemical imaging.000.txt
+/home/tseng/projects/slide_generator_clean/output/Tensor/labels/Tensor.019.txt
+/home/tseng/projects/slide_generator_clean/output/Tensor/labels/Tensor.023.txt
+/home/tseng/projects/slide_generator_clean/output/Foundations of mathematics/labels/Foundations of mathematics.020.txt
+/home/tseng/projects/slide_generator_clean/output/Alfred Tarski/labels/Alfred Tarski.010.txt
+/home/tseng/projects/slide_generator_clean/output/Alfred Tarski/labels/Alfred Tarski.000.txt
+/home/tseng/projects/slide_generator_clean/output/Photography and the law/labels/Photography and the law.000.txt
+/home/tseng/projects/slide_generator_clean/output/Cartography/labels/Cartography.014.txt
+/home/tseng/projects/slide_generator_clean/output/Cartography/labels/Cartography.008.txt
+/home/tseng/projects/slide_generator_clean/output/Complex number/labels/Complex number.035.txt
+/home/tseng/projects/slide_generator_clean/output/Complex number/labels/Complex number.042.txt
+/home/tseng/projects/slide_generator_clean/output/Integral calculus/labels/Integral calculus.000.txt
+/home/tseng/projects/slide_generator_clean/output/Helsinki/labels/Helsinki.029.txt
+/home/tseng/projects/slide_generator_clean/output/Helsinki/labels/Helsinki.032.txt
+/home/tseng/projects/slide_generator_clean/output/Helsinki/labels/Helsinki.020.txt
+/home/tseng/projects/slide_generator_clean/output/Molecular physics/labels/Molecular physics.007.txt
+/home/tseng/projects/slide_generator_clean/output/Ancient Greece/labels/Ancient Greece.001.txt
+/home/tseng/projects/slide_generator_clean/output/Babylonian mathematics/labels/Babylonian mathematics.006.txt
+/home/tseng/projects/slide_generator_clean/output/World line/labels/World line.008.txt
+/home/tseng/projects/slide_generator_clean/output/Black hole/labels/Black hole.001.txt
+/home/tseng/projects/slide_generator_clean/output/Joan Moschovakis/labels/Joan Moschovakis.004.txt
+/home/tseng/projects/slide_generator_clean/output/Magnetic field/labels/Magnetic field.030.txt
+/home/tseng/projects/slide_generator_clean/output/Leyden jar/labels/Leyden jar.012.txt
+/home/tseng/projects/slide_generator_clean/output/Projective geometry/labels/Projective geometry.002.txt
+/home/tseng/projects/slide_generator_clean/output/Digital single-lens reflex camera/labels/Digital single-lens reflex camera.022.txt
+/home/tseng/projects/slide_generator_clean/output/Charles Sanders Peirce/labels/Charles Sanders Peirce.027.txt
+/home/tseng/projects/slide_generator_clean/output/Charles Sanders Peirce/labels/Charles Sanders Peirce.001.txt
+/home/tseng/projects/slide_generator_clean/output/Multiplication/labels/Multiplication.020.txt
+/home/tseng/projects/slide_generator_clean/output/ISSN (identifier)/labels/ISSN (identifier).003.txt
+/home/tseng/projects/slide_generator_clean/output/Large format/labels/Large format.003.txt
+/home/tseng/projects/slide_generator_clean/output/Flash (photography)/labels/Flash (photography).013.txt
+/home/tseng/projects/slide_generator_clean/output/Underwater photography/labels/Underwater photography.004.txt
+/home/tseng/projects/slide_generator_clean/output/X-ray/labels/X-ray.006.txt
+/home/tseng/projects/slide_generator_clean/output/X-ray/labels/X-ray.007.txt
+/home/tseng/projects/slide_generator_clean/output/X-ray/labels/X-ray.002.txt
+/home/tseng/projects/slide_generator_clean/output/X-ray/labels/X-ray.014.txt
+/home/tseng/projects/slide_generator_clean/output/X-ray/labels/X-ray.012.txt
+/home/tseng/projects/slide_generator_clean/output/X-ray/labels/X-ray.020.txt
+/home/tseng/projects/slide_generator_clean/output/High-speed photography/labels/High-speed photography.010.txt
+/home/tseng/projects/slide_generator_clean/output/Newton's laws of motion/labels/Newton's laws of motion.022.txt
+/home/tseng/projects/slide_generator_clean/output/Wiles's proof of Fermat's Last Theorem/labels/Wiles's proof of Fermat's Last Theorem.010.txt
+/home/tseng/projects/slide_generator_clean/output/Approximation/labels/Approximation.004.txt
+/home/tseng/projects/slide_generator_clean/output/Differential geometry/labels/Differential geometry.004.txt
+/home/tseng/projects/slide_generator_clean/output/Differential geometry/labels/Differential geometry.016.txt
+/home/tseng/projects/slide_generator_clean/output/Saint Augustine/labels/Saint Augustine.036.txt
+/home/tseng/projects/slide_generator_clean/output/Pythagorean theorem/labels/Pythagorean theorem.013.txt
+/home/tseng/projects/slide_generator_clean/output/Pythagorean theorem/labels/Pythagorean theorem.002.txt
+/home/tseng/projects/slide_generator_clean/output/Photography in Vietnam/labels/Photography in Vietnam.004.txt
+/home/tseng/projects/slide_generator_clean/output/Covariant formulation of classical electromagnetism/labels/Covariant formulation of classical electromagnetism.006.txt
+/home/tseng/projects/slide_generator_clean/output/Ptolemy/labels/Ptolemy.012.txt
+/home/tseng/projects/slide_generator_clean/output/Virgo interferometer/labels/Virgo interferometer.014.txt
+/home/tseng/projects/slide_generator_clean/output/Profit (economics)/labels/Profit (economics).005.txt
+/home/tseng/projects/slide_generator_clean/output/Profit (economics)/labels/Profit (economics).006.txt
+/home/tseng/projects/slide_generator_clean/output/Focal length/labels/Focal length.006.txt
+/home/tseng/projects/slide_generator_clean/output/Focal length/labels/Focal length.002.txt
+/home/tseng/projects/slide_generator_clean/output/Mathematical optimization/labels/Mathematical optimization.021.txt
+/home/tseng/projects/slide_generator_clean/output/Internet/labels/Internet.012.txt
+/home/tseng/projects/slide_generator_clean/output/Oceanography/labels/Oceanography.001.txt
+/home/tseng/projects/slide_generator_clean/output/Visualization (graphics)/labels/Visualization (graphics).006.txt
+/home/tseng/projects/slide_generator_clean/output/World War II in Yugoslavia/labels/World War II in Yugoslavia.026.txt
+/home/tseng/projects/slide_generator_clean/output/World War II in Yugoslavia/labels/World War II in Yugoslavia.003.txt
+/home/tseng/projects/slide_generator_clean/output/World War II in Yugoslavia/labels/World War II in Yugoslavia.031.txt
+/home/tseng/projects/slide_generator_clean/output/Bremsstrahlung/labels/Bremsstrahlung.005.txt
+/home/tseng/projects/slide_generator_clean/output/Infrared photography/labels/Infrared photography.004.txt
+/home/tseng/projects/slide_generator_clean/output/Human eye/labels/Human eye.006.txt
+/home/tseng/projects/slide_generator_clean/output/Zone System/labels/Zone System.002.txt
+/home/tseng/projects/slide_generator_clean/output/Complex systems/labels/Complex systems.013.txt
+/home/tseng/projects/slide_generator_clean/output/Kepler conjecture/labels/Kepler conjecture.003.txt
+/home/tseng/projects/slide_generator_clean/output/Wave equation/labels/Wave equation.024.txt
+/home/tseng/projects/slide_generator_clean/output/Wave equation/labels/Wave equation.016.txt
+/home/tseng/projects/slide_generator_clean/output/Raymond Clare Archibald/labels/Raymond Clare Archibald.004.txt
+/home/tseng/projects/slide_generator_clean/output/History of physics/labels/History of physics.026.txt
+/home/tseng/projects/slide_generator_clean/output/History of physics/labels/History of physics.022.txt
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic tensor/labels/Electromagnetic tensor.009.txt
+/home/tseng/projects/slide_generator_clean/output/Unit normal/labels/Unit normal.001.txt
+/home/tseng/projects/slide_generator_clean/output/Differential geometry and topology/labels/Differential geometry and topology.001.txt
+/home/tseng/projects/slide_generator_clean/output/Algebraic topology/labels/Algebraic topology.014.txt
+/home/tseng/projects/slide_generator_clean/output/Gordon Kindlmann/labels/Gordon Kindlmann.008.txt
+/home/tseng/projects/slide_generator_clean/output/William Thomson, 1st Baron Kelvin/labels/William Thomson, 1st Baron Kelvin.028.txt
+/home/tseng/projects/slide_generator_clean/output/Differential calculus/labels/Differential calculus.006.txt
+/home/tseng/projects/slide_generator_clean/output/Leonhard Euler/labels/Leonhard Euler.008.txt
+/home/tseng/projects/slide_generator_clean/output/Rangefinder camera/labels/Rangefinder camera.013.txt
+/home/tseng/projects/slide_generator_clean/output/Rangefinder camera/labels/Rangefinder camera.010.txt
+/home/tseng/projects/slide_generator_clean/output/Tintype/labels/Tintype.009.txt
+/home/tseng/projects/slide_generator_clean/output/Henri Poincaré/labels/Henri Poincaré.004.txt
+/home/tseng/projects/slide_generator_clean/output/Henri Poincaré/labels/Henri Poincaré.005.txt
+/home/tseng/projects/slide_generator_clean/output/Aristotle/labels/Aristotle.007.txt
+/home/tseng/projects/slide_generator_clean/output/Logic/labels/Logic.003.txt
+/home/tseng/projects/slide_generator_clean/output/Latin language/labels/Latin language.007.txt
+/home/tseng/projects/slide_generator_clean/output/Probability distribution/labels/Probability distribution.027.txt
+/home/tseng/projects/slide_generator_clean/output/Probability distribution/labels/Probability distribution.028.txt
+/home/tseng/projects/slide_generator_clean/output/Geometric shape/labels/Geometric shape.004.txt
+/home/tseng/projects/slide_generator_clean/output/Albumen print/labels/Albumen print.004.txt
+/home/tseng/projects/slide_generator_clean/output/Smartphone/labels/Smartphone.032.txt
+/home/tseng/projects/slide_generator_clean/output/Graphic design/labels/Graphic design.001.txt
+/home/tseng/projects/slide_generator_clean/output/Bar magnet/labels/Bar magnet.015.txt
+/home/tseng/projects/slide_generator_clean/output/Parallel (geometry)/labels/Parallel (geometry).004.txt
+/home/tseng/projects/slide_generator_clean/output/Visual perception/labels/Visual perception.004.txt
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/labels/Ancient Egypt.037.txt
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/labels/Ancient Egypt.009.txt
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/labels/Ancient Egypt.004.txt
+/home/tseng/projects/slide_generator_clean/output/Ancient Egypt/labels/Ancient Egypt.016.txt
+/home/tseng/projects/slide_generator_clean/output/Relation (mathematics)/labels/Relation (mathematics).012.txt
+/home/tseng/projects/slide_generator_clean/output/Magnetism/labels/Magnetism.003.txt
+/home/tseng/projects/slide_generator_clean/output/Magnetism/labels/Magnetism.020.txt
+/home/tseng/projects/slide_generator_clean/output/Manifold/labels/Manifold.007.txt
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic radiation/labels/Electromagnetic radiation.025.txt
+/home/tseng/projects/slide_generator_clean/output/Nonclassical light/labels/Nonclassical light.005.txt
+/home/tseng/projects/slide_generator_clean/output/Finite element analysis/labels/Finite element analysis.009.txt
+/home/tseng/projects/slide_generator_clean/output/Power grid/labels/Power grid.013.txt
+/home/tseng/projects/slide_generator_clean/output/Rounding error/labels/Rounding error.014.txt
+/home/tseng/projects/slide_generator_clean/output/Carl Friedrich Gauss/labels/Carl Friedrich Gauss.016.txt
+/home/tseng/projects/slide_generator_clean/output/Carl Friedrich Gauss/labels/Carl Friedrich Gauss.000.txt
+/home/tseng/projects/slide_generator_clean/output/Carl Friedrich Gauss/labels/Carl Friedrich Gauss.031.txt
+/home/tseng/projects/slide_generator_clean/output/Homotopy theory/labels/Homotopy theory.008.txt
+/home/tseng/projects/slide_generator_clean/output/Mesopotamia/labels/Mesopotamia.000.txt
+/home/tseng/projects/slide_generator_clean/output/CERN/labels/CERN.003.txt
+/home/tseng/projects/slide_generator_clean/output/International Organization for Standardization/labels/International Organization for Standardization.003.txt
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic spectrum/labels/Electromagnetic spectrum.005.txt
+/home/tseng/projects/slide_generator_clean/output/Axiom/labels/Axiom.012.txt
+/home/tseng/projects/slide_generator_clean/output/Axiom/labels/Axiom.004.txt
+/home/tseng/projects/slide_generator_clean/output/Ancient China/labels/Ancient China.012.txt
+/home/tseng/projects/slide_generator_clean/output/Space (mathematics)/labels/Space (mathematics).012.txt
+/home/tseng/projects/slide_generator_clean/output/Space (mathematics)/labels/Space (mathematics).004.txt
+/home/tseng/projects/slide_generator_clean/output/Space (mathematics)/labels/Space (mathematics).008.txt
+/home/tseng/projects/slide_generator_clean/output/Frame-dragging/labels/Frame-dragging.000.txt
+/home/tseng/projects/slide_generator_clean/output/Theorem/labels/Theorem.000.txt
+/home/tseng/projects/slide_generator_clean/output/Image sharing/labels/Image sharing.017.txt
+/home/tseng/projects/slide_generator_clean/output/Electric generator/labels/Electric generator.010.txt
+/home/tseng/projects/slide_generator_clean/output/Nikola Tesla/labels/Nikola Tesla.017.txt
+/home/tseng/projects/slide_generator_clean/output/Nikola Tesla/labels/Nikola Tesla.019.txt
+/home/tseng/projects/slide_generator_clean/output/Nikola Tesla/labels/Nikola Tesla.010.txt
+/home/tseng/projects/slide_generator_clean/output/Statistical decision theory/labels/Statistical decision theory.015.txt
+/home/tseng/projects/slide_generator_clean/output/Astrology/labels/Astrology.009.txt
+/home/tseng/projects/slide_generator_clean/output/Panoramic photography/labels/Panoramic photography.016.txt
+/home/tseng/projects/slide_generator_clean/output/Panoramic photography/labels/Panoramic photography.015.txt
+/home/tseng/projects/slide_generator_clean/output/View from the Window at Le Gras/labels/View from the Window at Le Gras.006.txt
+/home/tseng/projects/slide_generator_clean/output/Michael Atiyah/labels/Michael Atiyah.000.txt
+/home/tseng/projects/slide_generator_clean/output/University of Cambridge/labels/University of Cambridge.012.txt
+/home/tseng/projects/slide_generator_clean/output/Analog photography/labels/Analog photography.007.txt
+/home/tseng/projects/slide_generator_clean/output/Analog photography/labels/Analog photography.000.txt
+/home/tseng/projects/slide_generator_clean/output/Theoretical computer science/labels/Theoretical computer science.000.txt
+/home/tseng/projects/slide_generator_clean/output/Plato/labels/Plato.003.txt
+/home/tseng/projects/slide_generator_clean/output/Relativity of simultaneity/labels/Relativity of simultaneity.011.txt
+/home/tseng/projects/slide_generator_clean/output/Afocal photography/labels/Afocal photography.007.txt
+/home/tseng/projects/slide_generator_clean/output/Ellipse/labels/Ellipse.034.txt
+/home/tseng/projects/slide_generator_clean/output/Digital printing/labels/Digital printing.010.txt
+/home/tseng/projects/slide_generator_clean/output/Digital printing/labels/Digital printing.014.txt
+/home/tseng/projects/slide_generator_clean/output/Positron/labels/Positron.011.txt
+/home/tseng/projects/slide_generator_clean/output/Stephen Hawking/labels/Stephen Hawking.001.txt
+/home/tseng/projects/slide_generator_clean/output/Reversal film/labels/Reversal film.014.txt
+/home/tseng/projects/slide_generator_clean/output/Active-pixel sensor/labels/Active-pixel sensor.001.txt
+/home/tseng/projects/slide_generator_clean/output/Press camera/labels/Press camera.003.txt
+/home/tseng/projects/slide_generator_clean/output/Spacetime/labels/Spacetime.028.txt
+/home/tseng/projects/slide_generator_clean/output/Spacetime/labels/Spacetime.032.txt
+/home/tseng/projects/slide_generator_clean/output/Spacetime/labels/Spacetime.027.txt
+/home/tseng/projects/slide_generator_clean/output/Thermodynamics/labels/Thermodynamics.011.txt
+/home/tseng/projects/slide_generator_clean/output/Vector (geometric)/labels/Vector (geometric).001.txt
+/home/tseng/projects/slide_generator_clean/output/Parabola/labels/Parabola.051.txt
+/home/tseng/projects/slide_generator_clean/output/Parabola/labels/Parabola.008.txt
+/home/tseng/projects/slide_generator_clean/output/Kirlian photography/labels/Kirlian photography.001.txt
+/home/tseng/projects/slide_generator_clean/output/Particle physics/labels/Particle physics.003.txt
+/home/tseng/projects/slide_generator_clean/output/Computer/labels/Computer.011.txt
+/home/tseng/projects/slide_generator_clean/output/Primary color/labels/Primary color.016.txt
+/home/tseng/projects/slide_generator_clean/output/Humidity/labels/Humidity.022.txt
+/home/tseng/projects/slide_generator_clean/output/Kip Thorne/labels/Kip Thorne.013.txt
+/home/tseng/projects/slide_generator_clean/output/Sports photography/labels/Sports photography.010.txt
+/home/tseng/projects/slide_generator_clean/output/Salah/labels/Salah.001.txt
+/home/tseng/projects/slide_generator_clean/output/Salah/labels/Salah.000.txt
+/home/tseng/projects/slide_generator_clean/output/Equals sign/labels/Equals sign.025.txt
+/home/tseng/projects/slide_generator_clean/output/Hipparchus of Nicaea/labels/Hipparchus of Nicaea.013.txt
+/home/tseng/projects/slide_generator_clean/output/Hipparchus of Nicaea/labels/Hipparchus of Nicaea.004.txt
+/home/tseng/projects/slide_generator_clean/output/Hipparchus of Nicaea/labels/Hipparchus of Nicaea.005.txt
+/home/tseng/projects/slide_generator_clean/output/Fashionable Nonsense/labels/Fashionable Nonsense.002.txt
+/home/tseng/projects/slide_generator_clean/output/Astrophotography/labels/Astrophotography.011.txt
+/home/tseng/projects/slide_generator_clean/output/Mathematical psychology/labels/Mathematical psychology.000.txt
+/home/tseng/projects/slide_generator_clean/output/Alessandro Volta/labels/Alessandro Volta.009.txt
+/home/tseng/projects/slide_generator_clean/output/Alessandro Volta/labels/Alessandro Volta.008.txt
+/home/tseng/projects/slide_generator_clean/output/Composition (visual arts)/labels/Composition (visual arts).016.txt
+/home/tseng/projects/slide_generator_clean/output/Pythagoreanism/labels/Pythagoreanism.017.txt
+/home/tseng/projects/slide_generator_clean/output/Dora Musielak/labels/Dora Musielak.006.txt
+/home/tseng/projects/slide_generator_clean/output/Architecture/labels/Architecture.020.txt
+/home/tseng/projects/slide_generator_clean/output/Infographic/labels/Infographic.007.txt
+/home/tseng/projects/slide_generator_clean/output/Plane (geometry)/labels/Plane (geometry).001.txt
+/home/tseng/projects/slide_generator_clean/output/Exposure (photography)/labels/Exposure (photography).012.txt
+/home/tseng/projects/slide_generator_clean/output/Apollonius of Perga/labels/Apollonius of Perga.021.txt
+/home/tseng/projects/slide_generator_clean/output/Areas of mathematics/labels/Areas of mathematics.010.txt
+/home/tseng/projects/slide_generator_clean/output/Areas of mathematics/labels/Areas of mathematics.007.txt
+/home/tseng/projects/slide_generator_clean/output/Magnetic monopole/labels/Magnetic monopole.021.txt
+/home/tseng/projects/slide_generator_clean/output/Isaac Newton/labels/Isaac Newton.001.txt
+/home/tseng/projects/slide_generator_clean/output/Isaac Newton/labels/Isaac Newton.012.txt
+/home/tseng/projects/slide_generator_clean/output/Infinite series/labels/Infinite series.025.txt
+/home/tseng/projects/slide_generator_clean/output/Logical disjunction/labels/Logical disjunction.012.txt
+/home/tseng/projects/slide_generator_clean/output/Logical disjunction/labels/Logical disjunction.017.txt
+/home/tseng/projects/slide_generator_clean/output/Geodetic effect/labels/Geodetic effect.002.txt
+/home/tseng/projects/slide_generator_clean/output/Instant camera/labels/Instant camera.015.txt
+/home/tseng/projects/slide_generator_clean/output/Photographic filter/labels/Photographic filter.013.txt
+/home/tseng/projects/slide_generator_clean/output/Quaternion/labels/Quaternion.032.txt
+/home/tseng/projects/slide_generator_clean/output/Quaternion/labels/Quaternion.006.txt
+/home/tseng/projects/slide_generator_clean/output/Color/labels/Color.005.txt
+/home/tseng/projects/slide_generator_clean/output/Charge-coupled device/labels/Charge-coupled device.009.txt
+/home/tseng/projects/slide_generator_clean/output/Charge-coupled device/labels/Charge-coupled device.001.txt
+/home/tseng/projects/slide_generator_clean/output/Abstract algebra/labels/Abstract algebra.005.txt
+/home/tseng/projects/slide_generator_clean/output/Position vector/labels/Position vector.002.txt
+/home/tseng/projects/slide_generator_clean/output/Francis Galton/labels/Francis Galton.028.txt
+/home/tseng/projects/slide_generator_clean/output/Photographic plate/labels/Photographic plate.009.txt
+/home/tseng/projects/slide_generator_clean/output/Rorschach test/labels/Rorschach test.012.txt
+/home/tseng/projects/slide_generator_clean/output/Frequency/labels/Frequency.004.txt
+/home/tseng/projects/slide_generator_clean/output/History of mathematics/labels/History of mathematics.007.txt
+/home/tseng/projects/slide_generator_clean/output/History of mathematics/labels/History of mathematics.015.txt
+/home/tseng/projects/slide_generator_clean/output/Voltage/labels/Voltage.014.txt
+/home/tseng/projects/slide_generator_clean/output/Einstein field equations/labels/Einstein field equations.002.txt
+/home/tseng/projects/slide_generator_clean/output/Pictorialism/labels/Pictorialism.006.txt
+/home/tseng/projects/slide_generator_clean/output/Digital camera/labels/Digital camera.018.txt
+/home/tseng/projects/slide_generator_clean/output/Ohm's law/labels/Ohm's law.007.txt
+/home/tseng/projects/slide_generator_clean/output/Ohm's law/labels/Ohm's law.014.txt
+/home/tseng/projects/slide_generator_clean/output/Ohm's law/labels/Ohm's law.012.txt
+/home/tseng/projects/slide_generator_clean/output/Tang dynasty/labels/Tang dynasty.006.txt
+/home/tseng/projects/slide_generator_clean/output/Subtraction/labels/Subtraction.011.txt
+/home/tseng/projects/slide_generator_clean/output/Insulator (electricity)/labels/Insulator (electricity).013.txt
+/home/tseng/projects/slide_generator_clean/output/Alcubierre drive/labels/Alcubierre drive.005.txt
+/home/tseng/projects/slide_generator_clean/output/Alcubierre drive/labels/Alcubierre drive.013.txt
+/home/tseng/projects/slide_generator_clean/output/Eugene Wigner/labels/Eugene Wigner.008.txt
+/home/tseng/projects/slide_generator_clean/output/Leibniz/labels/Leibniz.014.txt
+/home/tseng/projects/slide_generator_clean/output/Lorenz force/labels/Lorenz force.001.txt
+/home/tseng/projects/slide_generator_clean/output/Optics/labels/Optics.018.txt
+/home/tseng/projects/slide_generator_clean/output/Optics/labels/Optics.017.txt
+/home/tseng/projects/slide_generator_clean/output/Optics/labels/Optics.020.txt
+/home/tseng/projects/slide_generator_clean/output/Introduction to general relativity/labels/Introduction to general relativity.016.txt
+/home/tseng/projects/slide_generator_clean/output/New SI/labels/New SI.002.txt
+/home/tseng/projects/slide_generator_clean/output/Dark Age/labels/Dark Age.000.txt
+/home/tseng/projects/slide_generator_clean/output/Greek language/labels/Greek language.020.txt
+/home/tseng/projects/slide_generator_clean/output/François Viète/labels/François Viète.001.txt
+/home/tseng/projects/slide_generator_clean/output/Geomagnetic storm/labels/Geomagnetic storm.017.txt
+/home/tseng/projects/slide_generator_clean/output/Apsidal precession/labels/Apsidal precession.010.txt
+/home/tseng/projects/slide_generator_clean/output/Statistics/labels/Statistics.028.txt
+/home/tseng/projects/slide_generator_clean/output/Edmond Halley/labels/Edmond Halley.000.txt
+/home/tseng/projects/slide_generator_clean/output/Ladder paradox/labels/Ladder paradox.009.txt
+/home/tseng/projects/slide_generator_clean/output/Information visualization/labels/Information visualization.005.txt
+/home/tseng/projects/slide_generator_clean/output/Information visualization/labels/Information visualization.007.txt
+/home/tseng/projects/slide_generator_clean/output/Russell's paradox/labels/Russell's paradox.008.txt
+/home/tseng/projects/slide_generator_clean/output/Mathematical analysis/labels/Mathematical analysis.010.txt
+/home/tseng/projects/slide_generator_clean/output/Computer-assisted proof/labels/Computer-assisted proof.001.txt
+/home/tseng/projects/slide_generator_clean/output/Gauss's law for magnetism/labels/Gauss's law for magnetism.001.txt
+/home/tseng/projects/slide_generator_clean/output/Multiple exposure/labels/Multiple exposure.002.txt
+/home/tseng/projects/slide_generator_clean/output/Nobel Prize/labels/Nobel Prize.002.txt
+/home/tseng/projects/slide_generator_clean/output/Nobel Prize/labels/Nobel Prize.001.txt
+/home/tseng/projects/slide_generator_clean/output/Camera/labels/Camera.013.txt
+/home/tseng/projects/slide_generator_clean/output/Risk/labels/Risk.002.txt
+/home/tseng/projects/slide_generator_clean/output/Euler/labels/Euler.007.txt
+/home/tseng/projects/slide_generator_clean/output/Emmy Noether/labels/Emmy Noether.022.txt
+/home/tseng/projects/slide_generator_clean/output/Siméon Denis Poisson/labels/Siméon Denis Poisson.003.txt
+/home/tseng/projects/slide_generator_clean/output/A Mathematician's Apology/labels/A Mathematician's Apology.002.txt
+/home/tseng/projects/slide_generator_clean/output/Computer algebra/labels/Computer algebra.015.txt
+/home/tseng/projects/slide_generator_clean/output/Computer algebra/labels/Computer algebra.002.txt
+/home/tseng/projects/slide_generator_clean/output/Kite aerial photography/labels/Kite aerial photography.001.txt
+/home/tseng/projects/slide_generator_clean/output/Rational number/labels/Rational number.000.txt
+/home/tseng/projects/slide_generator_clean/output/Clinical trial/labels/Clinical trial.023.txt
+/home/tseng/projects/slide_generator_clean/output/Generating series/labels/Generating series.022.txt
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/labels/Coulomb's law.000.txt
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/labels/Coulomb's law.004.txt
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/labels/Coulomb's law.011.txt
+/home/tseng/projects/slide_generator_clean/output/Coulomb's law/labels/Coulomb's law.002.txt
+/home/tseng/projects/slide_generator_clean/output/Microcomputer/labels/Microcomputer.004.txt
+/home/tseng/projects/slide_generator_clean/output/Toy camera/labels/Toy camera.004.txt
+/home/tseng/projects/slide_generator_clean/output/Equivalence principle/labels/Equivalence principle.006.txt
+/home/tseng/projects/slide_generator_clean/output/Daguerreotype/labels/Daguerreotype.013.txt
+/home/tseng/projects/slide_generator_clean/output/Electrostatics/labels/Electrostatics.017.txt
+/home/tseng/projects/slide_generator_clean/output/Complex analysis/labels/Complex analysis.005.txt
+/home/tseng/projects/slide_generator_clean/output/Waveguide (electromagnetism)/labels/Waveguide (electromagnetism).008.txt
+/home/tseng/projects/slide_generator_clean/output/Molecular graphics/labels/Molecular graphics.008.txt
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic wave equation/labels/Electromagnetic wave equation.014.txt
+/home/tseng/projects/slide_generator_clean/output/List of largest photographs/labels/List of largest photographs.003.txt
+/home/tseng/projects/slide_generator_clean/output/LIGO/labels/LIGO.007.txt
+/home/tseng/projects/slide_generator_clean/output/Economics/labels/Economics.001.txt
+/home/tseng/projects/slide_generator_clean/output/Economics/labels/Economics.042.txt
+/home/tseng/projects/slide_generator_clean/output/Economics/labels/Economics.027.txt
+/home/tseng/projects/slide_generator_clean/output/Random sampling/labels/Random sampling.025.txt
+/home/tseng/projects/slide_generator_clean/output/Particle/labels/Particle.004.txt
+/home/tseng/projects/slide_generator_clean/output/Archimedes/labels/Archimedes.015.txt
+/home/tseng/projects/slide_generator_clean/output/Visual arts/labels/Visual arts.008.txt
+/home/tseng/projects/slide_generator_clean/output/Visual arts/labels/Visual arts.021.txt
+/home/tseng/projects/slide_generator_clean/output/Early modern period/labels/Early modern period.005.txt
+/home/tseng/projects/slide_generator_clean/output/Early modern period/labels/Early modern period.020.txt
+/home/tseng/projects/slide_generator_clean/output/Electromagnetic waves/labels/Electromagnetic waves.000.txt
+/home/tseng/projects/slide_generator_clean/output/Quantum field theory/labels/Quantum field theory.001.txt
+/home/tseng/projects/slide_generator_clean/output/Geometry/labels/Geometry.027.txt
+/home/tseng/projects/slide_generator_clean/output/John Dee/labels/John Dee.020.txt
+/home/tseng/projects/slide_generator_clean/output/Matrix theory/labels/Matrix theory.018.txt
+/home/tseng/projects/slide_generator_clean/output/Computational physics/labels/Computational physics.002.txt
+/home/tseng/projects/slide_generator_clean/output/Open problem/labels/Open problem.006.txt
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/labels/W. E. B. Du Bois.042.txt
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/labels/W. E. B. Du Bois.013.txt
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/labels/W. E. B. Du Bois.037.txt
+/home/tseng/projects/slide_generator_clean/output/W. E. B. Du Bois/labels/W. E. B. Du Bois.031.txt
+/home/tseng/projects/slide_generator_clean/output/Engineering/labels/Engineering.017.txt
+/home/tseng/projects/slide_generator_clean/output/Engineering/labels/Engineering.011.txt
+/home/tseng/projects/slide_generator_clean/output/Engineering/labels/Engineering.019.txt
+/home/tseng/projects/slide_generator_clean/output/Prime lens/labels/Prime lens.004.txt
+/home/tseng/projects/slide_generator_clean/output/Cyclic group/labels/Cyclic group.020.txt
+/home/tseng/projects/slide_generator_clean/output/Psychology/labels/Psychology.019.txt
+/home/tseng/projects/slide_generator_clean/output/Psychology/labels/Psychology.020.txt
+/home/tseng/projects/slide_generator_clean/output/Psychology/labels/Psychology.002.txt
+/home/tseng/projects/slide_generator_clean/output/Solids of revolution/labels/Solids of revolution.007.txt
+/home/tseng/projects/slide_generator_clean/output/Massimo Pigliucci/labels/Massimo Pigliucci.011.txt
+/home/tseng/projects/slide_generator_clean/output/Spherical trigonometry/labels/Spherical trigonometry.027.txt
+/home/tseng/projects/slide_generator_clean/output/Oral tradition/labels/Oral tradition.013.txt
+/home/tseng/projects/slide_generator_clean/output/Self-similarity/labels/Self-similarity.004.txt
+/home/tseng/projects/slide_generator_clean/output/Dispersion (optics)/labels/Dispersion (optics).011.txt
+/home/tseng/projects/slide_generator_clean/output/Polyhedron/labels/Polyhedron.031.txt
+/home/tseng/projects/slide_generator_clean/output/Continuous functions/labels/Continuous functions.007.txt
+/home/tseng/projects/slide_generator_clean/output/Proofs from THE BOOK/labels/Proofs from THE BOOK.002.txt
+/home/tseng/projects/slide_generator_clean/output/Proofs from THE BOOK/labels/Proofs from THE BOOK.010.txt
+/home/tseng/projects/slide_generator_clean/output/SI system/labels/SI system.002.txt
+/home/tseng/projects/slide_generator_clean/output/Image/labels/Image.003.txt
+/home/tseng/projects/slide_generator_clean/output/Holography/labels/Holography.009.txt
+/home/tseng/projects/slide_generator_clean/output/Mathematical economics/labels/Mathematical economics.014.txt
+/home/tseng/projects/slide_generator_clean/output/Fractals/labels/Fractals.002.txt
+/home/tseng/projects/slide_generator_clean/output/Gelatin process/labels/Gelatin process.005.txt
+/home/tseng/projects/slide_generator_clean/output/Gauss's law/labels/Gauss's law.006.txt
+/home/tseng/projects/slide_generator_clean/output/Light cone/labels/Light cone.000.txt
+/home/tseng/projects/slide_generator_clean/output/BKL singularity/labels/BKL singularity.014.txt
+/home/tseng/projects/slide_generator_clean/output/Sir John Herschel/labels/Sir John Herschel.010.txt
+/home/tseng/projects/slide_generator_clean/output/Aperture/labels/Aperture.003.txt
+/home/tseng/projects/slide_generator_clean/output/Electrical impedance/labels/Electrical impedance.002.txt
+/home/tseng/projects/slide_generator_clean/output/Tripod head/labels/Tripod head.017.txt
+/home/tseng/projects/slide_generator_clean/output/Muhammad ibn Musa al-Khwarizmi/labels/Muhammad ibn Musa al-Khwarizmi.010.txt
+/home/tseng/projects/slide_generator_clean/output/Covariant derivative/labels/Covariant derivative.008.txt
+/home/tseng/projects/slide_generator_clean/output/Cicero/labels/Cicero.002.txt
+/home/tseng/projects/slide_generator_clean/output/Cicero/labels/Cicero.006.txt
+/home/tseng/projects/slide_generator_clean/output/Engineering drawing/labels/Engineering drawing.037.txt
+/home/tseng/projects/slide_generator_clean/output/A Greek–English Lexicon/labels/A Greek–English Lexicon.011.txt
+/home/tseng/projects/slide_generator_clean/output/Hypothesis testing/labels/Hypothesis testing.012.txt
+/home/tseng/projects/slide_generator_clean/output/Earth's magnetic field/labels/Earth's magnetic field.018.txt
+/home/tseng/projects/slide_generator_clean/output/Hardy-Weinberg principle/labels/Hardy-Weinberg principle.007.txt
+/home/tseng/projects/slide_generator_clean/output/Roberta Millstein/labels/Roberta Millstein.000.txt
+/home/tseng/projects/slide_generator_clean/output/Roberta Millstein/labels/Roberta Millstein.004.txt
+/home/tseng/projects/slide_generator_clean/output/Modular arithmetic/labels/Modular arithmetic.006.txt
+/home/tseng/projects/slide_generator_clean/output/Fermat's Last theorem/labels/Fermat's Last theorem.019.txt
+/home/tseng/projects/slide_generator_clean/output/Fermat's Last theorem/labels/Fermat's Last theorem.004.txt
+/home/tseng/projects/slide_generator_clean/output/Exclusive or/labels/Exclusive or.015.txt
+/home/tseng/projects/slide_generator_clean/output/Nuclear physics/labels/Nuclear physics.016.txt
+/home/tseng/projects/slide_generator_clean/output/Logarithm/labels/Logarithm.010.txt
+/home/tseng/projects/slide_generator_clean/output/Logarithm/labels/Logarithm.031.txt
+/home/tseng/projects/slide_generator_clean/output/Acid/labels/Acid.002.txt
+/home/tseng/projects/slide_generator_clean/output/Physical oceanography/labels/Physical oceanography.006.txt

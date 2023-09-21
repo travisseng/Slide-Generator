@@ -153,9 +153,8 @@ class BulletPoint:
     def makeIndent(self):
         if Page.indent_count == -1:
             Page.indent_count = 0
-        print(Page.previous_element)
-        if isinstance(Page.previous_element, BulletPoint):
-            print("yo")
+
+        elif isinstance(Page.previous_element, BulletPoint):
             
             if Page.indent_count == 0:
                 if random.random() < 0.35:
@@ -362,8 +361,12 @@ class Style:
     def __init__(self, option="") -> None:
         self.option = option
     def build(self):
+        Page.previous_element = None
+        # Page.indent_count = -1
         return self.option
     def build2(self):
+        Page.previous_element = None
+        # Page.indent_count = -1
         return None
     
 class HtmlElement:
@@ -459,9 +462,7 @@ class Columns:
         for i,col in enumerate(self.contents):
             self.output.append(Style(col_span_x.format(self.c_size[i])))
             self.output = self.output + col
-            Page.previous_element = None
-            Page.indent_count = -1
-            print("close column")
+            
             self.output.append(close_div)
         # nb_elements_right = len(self.right_contents)
         # font_size_right = 1.0 - 0.065*nb_elements_right

@@ -1,0 +1,6 @@
+--2023-09-19 05:16:25--  https://storage.googleapis.com/kaggle-data-sets/3007389/5173903/compressed/PRINTED_TEX_230k/final_png_formulas.txt.zip?X-Goog-Algorithm=GOOG4-RSA-SHA256
+Résolution de storage.googleapis.com (storage.googleapis.com)… 142.250.201.59, 142.250.200.219, 172.217.18.59, ...
+Connexion à storage.googleapis.com (storage.googleapis.com)|142.250.201.59|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 400 Bad Request
+2023-09-19 05:16:25 erreur 400 : Bad Request.
+

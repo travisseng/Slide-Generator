@@ -17,8 +17,8 @@ def parse_content(cnt):
                 contents.append({"cls":"bp", "lvl":0, "cnt": line.strip().strip("* ")})
             elif line[0] == "+":
                 contents.append({"cls":"bp", "lvl":0, "cnt": line.strip().strip("+ ")})
-            # elif line[1] == "+":
-            #     contents.append({"cls":"bp", "lvl":1, "cnt": line.strip().strip("* ")})
+            elif line[1] == "+":
+                contents.append({"cls":"bp", "lvl":1, "cnt": line.strip().strip("* ")})
             elif line[:5] == "I hope":
                 continue
             elif len(line) > 0:

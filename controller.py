@@ -1,5 +1,5 @@
 from content import Content
-from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground, GradientBackground, ImagePage, Header, Title, Text, Image, Footer, Table
+from layout import Page, TitlePage, Slide, ImageBackground, ColoredBackground, GradientBackground, ImagePage, Header, Title, Text, Image, Footer, Table, Equation
 import json
 import random
 import glob
@@ -16,7 +16,7 @@ rand_color = randomcolor.RandomColor()
 bullet_styles = [r"\2022", r"\2299", r"\229A", r"\229B", r"\25C9", r"\29BF", r"\29BE", r"\25C6", r"\25C7", r"\25C8", r"\2731", r"\2724", r"\2732", r"\2726", r"\2727", r"\25A0", r"\2612", r"\25A1", r"\2713", r"\2714", r"\27A2", r"\27A3", r"\27A4", r"\27AE", r"\27B1", r"\25B7", r"\25B8", r"\25B9", r"\25BA", r"\25BB", r"\25FE"]
 
 MAX_FOOTER_CONTENT = 3
-FONT_SIZE = (29,45)
+FONT_SIZE = (29,40)
 LETTER_SPACING = (1.3,1.4)
 LINE_HEIGHT = (1.1,2)
 PROB_DISPLAY_TITLE = 0.8
@@ -24,8 +24,12 @@ PROB_HEADER = 0.4
 PROB_FOOTER = 0.4
 PADDING_HEADER_RANGE = (80,105)
 PADDING_BOTTOM_RANGE = (23,40)
+
+PROBA_EQUATION = 0.05
+PROBA_BONUS_TEXT = 0.05
 LOGOS_FILES = glob.glob("Logos/*.png") + glob.glob("Logos/*.jpg") + glob.glob("Logos/*.gif")
 border_styles = ["dotted", "dashed", "solid", "double", "groove", "ridge", "inset", "outset"]
+
 
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -45,15 +49,26 @@ def generateRandomDate():
 def generateName():
     name = random.sample(names, 2)
     return " ".join(name)
-# def generateFooterContent(text_list=[], filter_content=-1, proba=0.5):
-#     uni_name = random.choice(universities_data["names"])
-#     uni_url = random.choice(universities_data["url"])
-#     date = generateRandomDate()
-#     name = generateName()
-#     contents_before_filtered = text_list + [uni_name, name, uni_url, date]
-#     contents = contents_before_filtered[:filter_content]
-#     random.shuffle(contents)
-#     return [Text(item) for item in contents if random.random() < proba]
+
+eq_file = "utils/final_png_formulas.txt"
+def getRandomEquation():
+    if random.random() < PROBA_EQUATION:
+        with open(eq_file, "r") as f:
+            equations = f.readlines()
+        equation = random.choice(equations)
+        return [Equation(equation)]
+    else:
+        return []
+
+def getAddedContent():
+    added_content = []
+    if random.random() < PROBA_BONUS_TEXT:
+        added_content = added_content + [Text(fake.catch_phrase())]
+    added_content = added_content + getRandomEquation()
+    return added_content
+
+
+
 def generateRandomPageNb():
     page_a = random.randint(1,100)
     page_b = random.randint(1,100)
@@ -134,7 +149,11 @@ def createSlide(json_file, name=None):
     # Create layout
     title_page = TitlePage(c.getTitle())
     titles = c.getTitles()
-    pages = [Page(item, display_title=random.random() < PROB_DISPLAY_TITLE, title=title) for item, title in zip(c.getContents(), titles)]
+
+    ## ADD CONTENT TO ALL PAGES
+
+
+    pages = [Page(item, display_title=random.random() < PROB_DISPLAY_TITLE, title=title, added_content = getAddedContent()) for item, title in zip(c.getContents(), titles)]
 
     padding_top = None
     padding_bottom = None
@@ -245,8 +264,8 @@ def createSlide(json_file, name=None):
     return sli.build(), sli.build2()
 
 if __name__ == "__main__":
-    random.choice(glob.glob("../slide_generator/output/*/sum_slide.json"))
-    sli_md, sli_json = createSlide(random.choice(glob.glob("../slide_generator/output/*/sum_slide.json")))
+    # random.choice(glob.glob("../slide_generator/output/*/sum_slide.json"))
+    sli_md, sli_json = createSlide("sum_slide.json", "photo")
     with open("test.md", "w") as f:
         f.write(sli_md)
     with open("test.json", "w") as f:

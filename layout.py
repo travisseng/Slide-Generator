@@ -131,25 +131,31 @@ class Title:
         return {"title": self.text}
 
 class Text:
-    def __init__(self, text) -> None:
+    def __init__(self, text, bold=True) -> None:
         self.text = text
+        if bold == True:
+            if random.random() < 0.05:
+                self.text = "**%s**" % self.text
+
     def build(self):
         Page.previous_element = self
         if self.text[0] == "+":
             return "\n" + self.text
         else:
-            return "\n" + "<p>%s</p>\n" % self.text
+            # return "\n" + "<p>%s</p>\n" % self.text
+            return "\n" + self.text
     def build2(self):
         Page.previous_element = self
         return {"text": self.text}
 
 
 class BulletPoint:
-    def __init__(self, bps, style="-", count=1, lvl=0):
+    def __init__(self, bps, style="-", count=1, lvl=0, bold=True):
         self.bps = bps
         self.style = style
         self.lvl = lvl
         self.count = count
+        
     def makeIndent(self):
         if Page.indent_count == -1:
             Page.indent_count = 0
@@ -488,13 +494,15 @@ class Columns:
                 Page.indent_count = -1
         return output
     
-def convertToElement(content, bp_style = "-"):
+def convertToElement(content, bp_style = "-", bold = True):
     if content["cls"] == "img":
         return Image(content["image"], caption=content["caption"])
     elif content["cls"] == "text":
         return Text(content["cnt"])
     elif content["cls"] == "bp":
-        
+        if bold == True:
+            if random.random() < 0.05:
+                content["cnt"] = "**%s**" % content["cnt"]
         return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count, lvl=0)
 def flatten(l):
     return [item for sublist in l for item in sublist]
@@ -506,8 +514,9 @@ class Page:
     bps_count = 0
     indent_count = -1
 
-    def __init__(self, contents=[], display_title=True, title=None, header=None, footer=None):
+    def __init__(self, contents=[], display_title=True, title=None, header=None, footer=None, added_content = []):
         self.contents = contents
+        self.added_content = added_content
         self.display_title = display_title
         self.style = ""
         if title is None:
@@ -517,6 +526,7 @@ class Page:
         self.body = self.generate_body()
         self.header = header
         self.footer = footer
+        
         Page.bps_count = 0
     
     def setHeader(self, header):
@@ -557,15 +567,15 @@ class Page:
         figures_elements = self.contents["equations"] if "equations" in self.contents.keys() else []
 
 
-
+        
 
 
         ## adjust text size based on number of elements
         nb_txt_elts = len(txt_elements)
         nb_img_elts = min(len(self.contents["images"]), MAX_NB_IMG)
-
+        nb_added_content = len(self.added_content)
         
-        self.addPageStyle("p,li {font-size:%.2fem}" % (1.0 - (nb_txt_elts+nb_img_elts)*0.04))
+        self.addPageStyle("p,li {font-size:%.2fem}" % (1.0 - (nb_txt_elts+nb_img_elts+nb_added_content)*0.04))
 
         ## add elements
         output.append(txt_elements)
@@ -575,6 +585,8 @@ class Page:
             random.shuffle(figures_elements)
             output.append([Equation(item) for item in figures_elements[:MAX_NB_EQUATIONS]])
 
+        ## add content
+        output.append([item for item in self.added_content])
         random.shuffle(output)
         ## BODY CONTENT
         # single column
@@ -590,7 +602,7 @@ class Page:
             # left_c = output[0]
             # right_c = output[1]
             return [Columns([output[:half], output[half:]], c_size=[3,3])]
-        else: # double column
+        else: # triple column
             output = flatten(output)
             random.shuffle(output)
             third = len(output) // 3

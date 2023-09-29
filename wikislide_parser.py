@@ -231,6 +231,7 @@ def parse_wiki(title="Toulouse", lang="en"):
         
 
 from multiprocessing import Pool
+from multiprocessing import get_context
 import tqdm
 if not args.related:
     title = args.title
@@ -250,7 +251,8 @@ else:
     #     parse_wiki(i)
     new_list_articles = list(new_list_articles)[:args.limit]
     print(new_list_articles)
-    pool = Pool()
+    pool = get_context("fork").Pool()
+    
     # processes = [Process(target=parse_wiki, args=(i,)) for i in new_list_articles]
     for _ in tqdm.tqdm(pool.imap_unordered(parse_wiki, new_list_articles), total=len(new_list_articles)):
         pass

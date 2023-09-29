@@ -7,3 +7,8 @@ Then generate slides based on wikipedia content by doing
 
 To generate images from slides, do
 `python slides_to_img.py`
+
+To generate boxes from slides, do
+`python slides_to_bbox.py`
+
+The outputs should be in `output/Singapore`

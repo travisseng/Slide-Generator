@@ -1,0 +1,13 @@
+beautifulsoup4==4.11.2
+distinctipy==1.2.2
+Faker==19.3.1
+numpy==1.21.6
+opencv_contrib_python==4.5.4.58
+opencv_python==4.5.4.58
+pandas==1.5.3
+Pillow==10.0.1
+PyMuPDF==1.22.5
+randomcolor==0.4.4.6
+summa==1.2.0
+tqdm==4.65.0
+wikipedia==1.4.0

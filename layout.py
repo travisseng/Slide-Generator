@@ -112,6 +112,7 @@ class CheckerBackground:
         output.append("</style>")
         return output
 
+PROB_BOLD = 0
 
 ornement = ["_", "**"]
 class Title:
@@ -119,23 +120,23 @@ class Title:
         self.text = text
         self.rand = rand
     def build(self):
-        if self.rand:
-            if random.random() > 0.7:
-                rand_orn = random.choice(ornement)
-                return " ## " + "{}{}{}".format(rand_orn,self.text,rand_orn)
-            else:
-                return " ## " + self.text
-        else:
-            return " ## " + self.text
+        # if self.rand:
+        #     if random.random() > 0.7:
+        #         rand_orn = random.choice(ornement)
+        #         return "# " + "{}{}{}".format(rand_orn,self.text,rand_orn)
+        #     else:
+        #         return "# " + self.text
+        # else:
+        return "# " + self.text
     def build2(self):
         return {"title": self.text}
 
 class Text:
     def __init__(self, text, bold=True) -> None:
         self.text = text
-        if bold == True:
-            if random.random() < 0.05:
-                self.text = "**%s**" % self.text
+        # if bold == True:
+        #     if random.random() < 0.05:
+        #         self.text = "**%s**" % self.text
 
     def build(self):
         Page.previous_element = self
@@ -493,16 +494,37 @@ class Columns:
                 Page.previous_element = None
                 Page.indent_count = -1
         return output
+
+def randomBold(text, max_words_bold = 5):
+    words = text.split(" ")
+    nb_words = len(words)
+    if nb_words == 0:
+        return text
     
+    select_bold_words = min(random.randint(1,max_words_bold), nb_words)
+    # print(nb_words, select_bold_words)
+    if select_bold_words == nb_words:
+        select_start = 0
+    else:
+        select_start = random.randint(0,nb_words-select_bold_words-1)
+    bold_words = words[select_start:select_start+select_bold_words]
+    bold_sentence = "**" + " ".join(bold_words) + "**"
+    full_words = words[:select_start] + [bold_sentence] + words[select_start+select_bold_words:]
+    return " ".join(full_words)
+
 def convertToElement(content, bp_style = "-", bold = True):
     if content["cls"] == "img":
         return Image(content["image"], caption=content["caption"])
     elif content["cls"] == "text":
+        if random.random() < PROB_BOLD:
+            # content["cnt"] = "**%s**" % content["cnt"]
+            content["cnt"] = randomBold(content["cnt"])
         return Text(content["cnt"])
     elif content["cls"] == "bp":
         if bold == True:
-            if random.random() < 0.05:
-                content["cnt"] = "**%s**" % content["cnt"]
+            if random.random() < PROB_BOLD:
+                # content["cnt"] = "**%s**" % content["cnt"]
+                content["cnt"] = randomBold(content["cnt"])
         return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count, lvl=0)
 def flatten(l):
     return [item for sublist in l for item in sublist]
@@ -561,8 +583,10 @@ class Page:
             for i in range(len(self.contents["text"])):
                 if random.random() > 0.5: 
                     self.contents["text"][i]["cls"] = "text"
+                else:
+                    self.contents["text"][i]["cls"] = "bp"
         
-        txt_elements = [convertToElement(item, bp_style) for item in self.contents["text"]]
+        txt_elements = [convertToElement(item, bp_style, False) for item in self.contents["text"]]
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
         figures_elements = self.contents["equations"] if "equations" in self.contents.keys() else []
 

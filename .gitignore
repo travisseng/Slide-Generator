@@ -1,9 +1,6 @@
-*.png
-*.jpg
-*.svg
-*.pdf
 output/*
 __pycache__
 commands_marp_auto.txt
 content.ipynb
 generate_sum_slides.py
+Wikipedia

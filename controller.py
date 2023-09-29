@@ -25,8 +25,8 @@ PROB_FOOTER = 0.4
 PADDING_HEADER_RANGE = (80,105)
 PADDING_BOTTOM_RANGE = (23,40)
 
-PROBA_EQUATION = 0.05
-PROBA_BONUS_TEXT = 0.05
+PROBA_EQUATION = 0
+PROBA_BONUS_TEXT = 0
 LOGOS_FILES = glob.glob("Logos/*.png") + glob.glob("Logos/*.jpg") + glob.glob("Logos/*.gif")
 border_styles = ["dotted", "dashed", "solid", "double", "groove", "ridge", "inset", "outset"]
 
@@ -63,7 +63,7 @@ def getRandomEquation():
 def getAddedContent():
     added_content = []
     if random.random() < PROBA_BONUS_TEXT:
-        added_content = added_content + [Text(fake.catch_phrase())]
+        added_content = added_content + [Text("#### %s " % fake.catch_phrase())]
     added_content = added_content + getRandomEquation()
     return added_content
 
@@ -137,12 +137,12 @@ def generateFooterStyle(prob_bg=0.33,prob_border=0.33):
     # style = ""
     return style, padding_bottom
 
-def createSlide(json_file, name=None):
+def createSlide(json_file, name=None, summarized=True):
     ## output : slide markdown, slide json (for pix2struct for example)
     if name is not None:
-        c = Content(json_file, name)
+        c = Content(json_file, name, summarized=summarized)
     else:
-        c = Content(json_file)
+        c = Content(json_file, summarized=summarized)
 
     # Create header
     hasHeader = random.random() < PROB_HEADER
@@ -265,7 +265,7 @@ def createSlide(json_file, name=None):
 
 if __name__ == "__main__":
     # random.choice(glob.glob("../slide_generator/output/*/sum_slide.json"))
-    sli_md, sli_json = createSlide("sum_slide.json", "photo")
+    sli_md, sli_json = createSlide("Wikipedia/Matrix (mathematics)/slide.json", "Matrix (mathematics)", summarized=False)
     with open("test.md", "w") as f:
         f.write(sli_md)
     with open("test.json", "w") as f:
@@ -273,3 +273,8 @@ if __name__ == "__main__":
     # print(sli_json[0]["slide"])
     # with open("test_output.md", "w") as f:
     #     f.write(utils.dict2markdown(sli_json[0]["slide"]))
+
+# with open("Wikipedia/Matrix (mathematics)/slide.json", 'r') as openfile:
+#     contents = json.load(openfile)[1:]
+# contents = parseAll(contents)
+# print(contents[1])

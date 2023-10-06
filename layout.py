@@ -115,6 +115,7 @@ class CheckerBackground:
         output.append("</style>")
         return output
 
+PROB_BOLD = 0
 
 ornement = ["_", "**"]
 class Title:
@@ -136,6 +137,9 @@ class Title:
 class Text:
     def __init__(self, text) -> None:
         self.text = text
+        # if bold == True:
+        #     if random.random() < 0.05:
+        #         self.text = "**%s**" % self.text
 
     def build(self):
         Page.previous_element = self
@@ -493,6 +497,12 @@ class Columns:
                 Page.previous_element = None
                 Page.indent_count = -1
         return output
+
+def randomBold(text, max_words_bold = 5):
+    words = text.split(" ")
+    nb_words = len(words)
+    if nb_words == 0:
+        return text
     
 def randomBold(text, max_words_bold = 5):
     words = text.split(" ")
@@ -582,8 +592,10 @@ class Page:
             for i in range(len(self.contents["text"])):
                 if random.random() > 0.5: 
                     self.contents["text"][i]["cls"] = "text"
+                else:
+                    self.contents["text"][i]["cls"] = "bp"
         
-        txt_elements = [convertToElement(item, bp_style) for item in self.contents["text"]]
+        txt_elements = [convertToElement(item, bp_style, False) for item in self.contents["text"]]
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
         figures_elements = self.contents["equations"] if "equations" in self.contents.keys() else []
 

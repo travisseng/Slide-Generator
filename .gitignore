@@ -1,7 +1,3 @@
-*.png
-*.jpg
-*.svg
-*.pdf
 output/*
 __pycache__
 commands_marp_auto.txt

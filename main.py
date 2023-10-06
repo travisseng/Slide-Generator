@@ -9,10 +9,11 @@ os.makedirs("output", exist_ok=True)
 
 random.seed(0)
 json_files = sorted(glob.glob("../slide_generator/output/*/sum_slide.json"))
+json_files = sorted(glob.glob("Wikipedia/*/slide.json"))
 for json_file in tqdm.tqdm(json_files):
     # print(json_file)
     name_sli = json_file.split("/")[-2]
-    sli_md, sli_json = createSlide(json_file)
+    sli_md, sli_json = createSlide(json_file, summarized=False)
     os.makedirs("output/{}".format(name_sli), exist_ok=True)
 
     with open("output/{}/slide.md".format(name_sli), "w") as file:

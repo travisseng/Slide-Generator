@@ -12,7 +12,7 @@ def dict2markdown(dictio):
                 elif "text" in cnt.keys():
                     output.append(cnt["text"])
                 elif "equation" in cnt.keys():
-                    output.append("$$%s$$" % cnt["equation"])
+                    output.append("\[%s\]" % cnt["equation"])
                 else:
                     output.append("<%s>" % list(cnt.keys())[0])
         output.append("\n---")

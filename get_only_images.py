@@ -26,10 +26,10 @@ for label in label_files:
             # there is a annotation
             if random.random() > 0.9:
                 val_contains_images_label.append(root_dir + label + "\n")
-                val_contains_images_img.append(root_dir + label.replace("labels", "images").replace("txt", "jpg") + '\n')
+                val_contains_images_img.append(root_dir + label.replace("labels", "images").replace("txt", "png") + '\n')
             else:
                 contains_images_label.append(root_dir + label + "\n")
-                contains_images_img.append(root_dir + label.replace("labels", "images").replace("txt", "jpg") + '\n')
+                contains_images_img.append(root_dir + label.replace("labels", "images").replace("txt", "png") + '\n')
 with open("annotations/img_labels.txt", "w") as f:
     f.writelines(contains_images_label)
 with open("annotations/img_img.txt", "w") as f:
@@ -38,3 +38,4 @@ with open("annotations/img_val_labels.txt", "w") as f:
     f.writelines(val_contains_images_label)
 with open("annotations/img_val_img.txt", "w") as f:
     f.writelines(val_contains_images_img)
+print("Generating annotations images")

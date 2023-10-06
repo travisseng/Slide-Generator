@@ -17,8 +17,8 @@ def parse_content(cnt):
                 contents.append({"cls":"bp", "lvl":0, "cnt": line.strip().strip("* ")})
             elif line[0] == "+":
                 contents.append({"cls":"bp", "lvl":0, "cnt": line.strip().strip("+ ")})
-            elif line[1] == "+":
-                contents.append({"cls":"bp", "lvl":1, "cnt": line.strip().strip("* ")})
+            # elif line[1] == "+":
+            #     contents.append({"cls":"bp", "lvl":1, "cnt": line.strip().strip("* ")})
             elif line[:5] == "I hope":
                 continue
             elif len(line) > 0:
@@ -59,8 +59,10 @@ class Content:
         for slide_content in self.contents:
             if "images" in slide_content.keys():
                 new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [dict(item, **{'cls':'img'}) for item in slide_content["images"]], "equations": slide_content["equations"] if "equations" in slide_content.keys() else [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
+                # new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [dict(item, **{'cls':'img'}) for item in slide_content["images"]], "equations": [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
             else:
-                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [], "equations": slide_content["equations"] if "equations" in slide_content.keys() else [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
+                # new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [], "equations": slide_content["equations"] if "equations" in slide_content.keys() else [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
+                new_dict = {"title": slide_content["title"], "text": parse_content(slide_content["content"]), "images": [], "equations": [], "tables": slide_content["tables"] if "tables" in slide_content.keys() else []}
             output.append(new_dict)
         return output
     

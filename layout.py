@@ -1,5 +1,8 @@
 import random
 import numpy as np
+
+PROB_BOLD = 0.05
+
 class Slide:
     def __init__(self, bg=None, pages = [], paginate = True, theme = "default") -> None:
         self.background = bg
@@ -119,23 +122,20 @@ class Title:
         self.text = text
         self.rand = rand
     def build(self):
-        if self.rand:
-            if random.random() > 0.7:
-                rand_orn = random.choice(ornement)
-                return " ## " + "{}{}{}".format(rand_orn,self.text,rand_orn)
-            else:
-                return " ## " + self.text
-        else:
-            return " ## " + self.text
+        # if self.rand:
+        #     if random.random() > 0.7:
+        #         rand_orn = random.choice(ornement)
+        #         return " ## " + "{}{}{}".format(rand_orn,self.text,rand_orn)
+        #     else:
+        #         return " ## " + self.text
+        # else:
+        return "# " + self.text
     def build2(self):
         return {"title": self.text}
 
 class Text:
-    def __init__(self, text, bold=True) -> None:
+    def __init__(self, text) -> None:
         self.text = text
-        if bold == True:
-            if random.random() < 0.05:
-                self.text = "**%s**" % self.text
 
     def build(self):
         Page.previous_element = self
@@ -150,7 +150,7 @@ class Text:
 
 
 class BulletPoint:
-    def __init__(self, bps, style="-", count=1, lvl=0, bold=True):
+    def __init__(self, bps, style="-", count=1, lvl=0):
         self.bps = bps
         self.style = style
         self.lvl = lvl
@@ -166,14 +166,14 @@ class BulletPoint:
                 if random.random() < 0.35:
                     Page.indent_count = 1
             elif Page.indent_count == 1:
-                if random.random() < 0.5:
+                if random.random() < 0.4:
                     Page.indent_count = 0
-                elif random.random() < 0.6:
+                elif random.random() < 0.5:
                     Page.indent_count = 2
                 else:
                     Page.indent_count = 1
             elif Page.indent_count == 2:
-                if random.random() < 0.8:
+                if random.random() < 0.7:
                     Page.indent_count = 0
                 else:
                     Page.indent_count = 2
@@ -214,7 +214,7 @@ class BulletPoint:
             for i, bp in enumerate(self.bps):
                 # output["bps"].append({"text": bp})
 
-                output.append({"text":"    " * self.lvl + "+ " +  "%s" % (bp)})
+                output.append({"text":"    " * self.lvl + "* " +  "%s" % (bp)})
         Page.previous_element = self
         if len(output) == 1:
             return output[0]
@@ -494,16 +494,37 @@ class Columns:
                 Page.indent_count = -1
         return output
     
+def randomBold(text, max_words_bold = 5):
+    words = text.split(" ")
+    nb_words = len(words)
+    if nb_words == 0:
+        return text
+    
+    select_bold_words = min(random.randint(1,max_words_bold), nb_words)
+    if select_bold_words == nb_words:
+        select_start = 0
+    else:
+        select_start = random.randint(0,nb_words-select_bold_words-1)
+    bold_words = words[select_start:select_start+select_bold_words]
+    bold_sentence = "**" + " ".join(bold_words) + "**"
+    full_words = words[:select_start] + [bold_sentence] + words[select_start+select_bold_words:]
+    return " ".join(full_words)
+
 def convertToElement(content, bp_style = "-", bold = True):
     if content["cls"] == "img":
         return Image(content["image"], caption=content["caption"])
     elif content["cls"] == "text":
+        if random.random() < PROB_BOLD:
+            # content["cnt"] = "**%s**" % content["cnt"]
+            content["cnt"] = randomBold(content["cnt"])
         return Text(content["cnt"])
     elif content["cls"] == "bp":
         if bold == True:
-            if random.random() < 0.05:
-                content["cnt"] = "**%s**" % content["cnt"]
+            if random.random() < PROB_BOLD:
+                # content["cnt"] = "**%s**" % content["cnt"]
+                content["cnt"] = randomBold(content["cnt"])
         return BulletPoint([content["cnt"]], style=bp_style, count=Page.bps_count, lvl=0)
+    
 def flatten(l):
     return [item for sublist in l for item in sublist]
 
@@ -566,16 +587,15 @@ class Page:
         img_elements = [Images([item["image"] for item in self.contents["images"][:MAX_NB_IMG]])]
         figures_elements = self.contents["equations"] if "equations" in self.contents.keys() else []
 
-
         
 
 
         ## adjust text size based on number of elements
         nb_txt_elts = len(txt_elements)
         nb_img_elts = min(len(self.contents["images"]), MAX_NB_IMG)
-        nb_added_content = len(self.added_content)
+        nb_added_content = len(self.added_content) + min(len(figures_elements), MAX_NB_EQUATIONS)
         
-        self.addPageStyle("p,li {font-size:%.2fem}" % (1.0 - (nb_txt_elts+nb_img_elts+nb_added_content)*0.04))
+        self.addPageStyle("p,ul,ol {font-size:%.2fem}" % (1.0 - (nb_txt_elts+nb_img_elts+nb_added_content)*0.04))
 
         ## add elements
         output.append(txt_elements)

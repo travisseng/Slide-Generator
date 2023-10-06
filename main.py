@@ -3,9 +3,11 @@ import glob
 import os
 import json
 import tqdm
+import random
 import utils
 os.makedirs("output", exist_ok=True)
 
+random.seed(0)
 json_files = sorted(glob.glob("../slide_generator/output/*/sum_slide.json"))
 for json_file in tqdm.tqdm(json_files):
     # print(json_file)
